@@ -67,7 +67,7 @@
 .MobileMessageScreen {
   enabled:true;
   width:100%;
-  background-color:#F5F9FC;
+  background-color:#FFFFFF;
   padding:0px;
   margin:0px;
   border-style:solid;
@@ -102,7 +102,7 @@
 /* --- LOGO im Header --------------*/
 .MobileHeaderLogo {
   enabled:true;
-  background-color:#D9E5F2;
+  background-color:#FFFFFF;
   vertical-align:middle;
   height:16px;
   border:0px;
@@ -127,6 +127,7 @@
 /* --- SUBSCREENS ------------------*/
 .MobileSubScreen {
   enabled:true;
+  background-color:#FFFFFF;
   table-layout:fixed;
   width:100%;
   padding:0px;
@@ -149,7 +150,7 @@
   enabled:true;
   width:100%;
   table-layout:fixed;
-  background-color:#D9E5F2;
+  background-color:#FFFFFF;
   padding:0px;
   margin:0px;
 }
@@ -157,7 +158,7 @@
 .MobileFrameHeader {
   enabled:true;
   width:100%;
-  background-color:#A3C1E4;
+  background-color:#FFFFFF;
   font-weight:bold;
   padding:0px;
   margin:0px;
@@ -171,6 +172,7 @@
 /* --- ACTIVE BUTTON ---------------*/
 .MobileButton {
   enabled:true;
+  background-color:#FFFFFF;
   width:100%;
   font-weight: 400;
 }
@@ -484,7 +486,7 @@
   enabled:true;
   width:90%;
   table-layout:fixed;
-  background-color:#D9E5F2;
+  background-color:#FFFFFF;
   padding:0px;
   margin:0px;
   border:2px;
