@@ -161,14 +161,6 @@
   font-weight: 400;
 }
 
-/* --- Responsive adjustments for mobile devices --- */
-@media (max-width: 600px) {
-  .MobileUserArea, .MobileCuaArea, .MobileMessageScreen, .MobileFrame, .MobileFrameHeader {
-    padding: 10px;
-    margin: 5px 0;
-  }
-}
-
 /* --- DISABLED BUTTON -------------*/
 .MobileButtonDisabled {
   enabled:true;
