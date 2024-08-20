@@ -3,35 +3,28 @@
 /*----------------------------------*/
 @import url("../ALV_GRID.CSS");
 
-.MobileUserArea, input {
-  enabled:true;
-  font-family:arial;
-  font-size:100%;
+.MobileUserArea, input, textarea {
+  enabled: true;
+  font-family: Arial, sans-serif;
+  font-size: 100%;
 }
-
-.MobileUserArea, textarea {
-  enabled:true;
-  font-family:arial;
-  font-size:100%;
-}
-
 
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
-  enabled:true;  
-  margin: 0px;
-  padding: 0px;
-  border-width: 0px;
-  background-color:#F5F9FC;
+  enabled: true;  
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-color: #F5F9FC; /* Light pastel background */
 }
 
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
-  enabled:true;
-  width:100%;
-  padding:0px;
-  margin:0px;
-  border:0px;
+  enabled: true;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 /*----------------------------------*/
@@ -40,23 +33,21 @@
 
 /* --- CUA AREA --------------------*/
 .MobileCuaArea {
-  enabled:true;  
-  width:100%;
-  background-color:#D9E5F2;
-  padding:0px;
-  margin:0px;
-  border-bottom-style:solid;
-  border-bottom-width:2px;
-  border-bottom-color:#B3C3CF;
+  enabled: true;  
+  width: 100%;
+  background-color: #D9E5F2; /* Pastel blue */
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #B3C3CF;
 }
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
-  enabled:true;
-  table-layout:fixed;
-  width:100%;
-  overflow-x:auto;
-  overflow-y:auto;
+  enabled: true;
+  table-layout: fixed;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 /* ---------------------------------*/
@@ -65,17 +56,12 @@
 
 /* --- MESSAGE ---------------------*/
 .MobileMessageScreen {
-  enabled:true;
-  width:100%;
-  background-color:#F5F9FC;
-  padding:0px;
-  margin:0px;
-  border-style:solid;
-  border-color:#C40026;
-  border-top-width:0px;
-  border-left-width:0px;
-  border-right-width:0px;
-  border-bottom-width:2px;
+  enabled: true;
+  width: 100%;
+  background-color: #F5F9FC;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #C40026;
 }
 
 .MobileMessageLine {
@@ -83,30 +69,30 @@
 
 /* --- MESSAGE ---------------------*/
 .MobileMessageLogo {
-  enabled:true;
-  vertical-align:middle;
-  padding-left:3px;
-  padding-right:3px;
+  enabled: true;
+  vertical-align: middle;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /* --- TITLE -----------------------*/
 .MobileWindowTitle {
-  enabled:true;
-  font-weight:bold;
-  font-size:1.0em;
-  padding-left:7px;
-  overflow:hidden;
-  white-space:nowrap;
+  enabled: true;
+  font-weight: bold;
+  font-size: 1em;
+  padding-left: 7px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* --- LOGO im Header --------------*/
 .MobileHeaderLogo {
-  enabled:true;
-  background-color:#D9E5F2;
-  vertical-align:middle;
-  height:16px;
-  border:0px;
-  padding-left:3px;
+  enabled: true;
+  background-color: #D9E5F2;
+  vertical-align: middle;
+  height: 16px;
+  border: 0;
+  padding-left: 3px;
 }
 
 /* --- Include Frame ---------------*/
@@ -115,9 +101,9 @@
 
 /* --- Basic Row -------------------*/
 .MobileRow {
-  enabled:true;
-  white-space:nowrap;
-  vertical-align:middle;
+  enabled: true;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 /* ---------------------------------*/
@@ -126,53 +112,61 @@
 
 /* --- SUBSCREENS ------------------*/
 .MobileSubScreen {
-  enabled:true;
-  table-layout:fixed;
-  width:100%;
-  padding:0px;
-  margin:0px;
-  border:0px;
+  enabled: true;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 /* --- STEPLOOPS -------------------*/
 .MobileStepLoop {
-  enabled:true;
-  table-layout:fixed;
-  width:100%;
-  padding:0px;
-  margin:0px;
-  border:0px;
+  enabled: true;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 /* --- FRAME -----------------------*/
 .MobileFrame {
-  enabled:true;
-  width:100%;
-  table-layout:fixed;
-  background-color:#D9E5F2;
-  padding:0px;
-  margin:0px;
+  enabled: true;
+  width: 100%;
+  table-layout: fixed;
+  background-color: #D9E5F2; /* Pastel blue */
+  padding: 0;
+  margin: 0;
 }
 
 .MobileFrameHeader {
-  enabled:true;
-  width:100%;
-  background-color:#A3C1E4;
-  font-weight:bold;
-  padding:0px;
-  margin:0px;
-  border:0px;
+  enabled: true;
+  width: 100%;
+  background-color: #A3C1E4; /* Pastel blue */
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .MobileFrameHidden {
-  width:100%;
+  width: 100%;
 }
 
 /* --- ACTIVE BUTTON ---------------*/
 .MobileButton {
-  enabled:true;
-  width:100%;
+  enabled: true;
+  width: 100%;
   font-weight: 400;
+}
+
+/* --- Responsive adjustments for mobile devices --- */
+@media (max-width: 600px) {
+  .MobileUserArea, .MobileCuaArea, .MobileMessageScreen, .MobileFrame, .MobileFrameHeader {
+    padding: 10px;
+    margin: 5px 0;
+  }
 }
 
 /* --- DISABLED BUTTON -------------*/
