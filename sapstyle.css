@@ -19,6 +19,8 @@
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
   enabled:true;  
+  width:device-width;
+  height: device-height;
   margin: 0px;
   padding: 0px;
   border-width: 0px;
@@ -28,7 +30,8 @@
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
   enabled:true;
-  width:100%;
+  width:device-width;
+  height: device-height;
   padding:0px;
   margin:0px;
   border:0px;
@@ -133,8 +136,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width:device-width;
+  height: device-height;
   overflow: hidden;
   table-layout: auto;
 }
