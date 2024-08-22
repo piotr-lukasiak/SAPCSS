@@ -41,13 +41,13 @@
 /* --- CUA AREA --------------------*/
 .MobileCuaArea {
   enabled:true;  
-  width:100%;
-  background-color:#FFFFFF;
-  padding:0px;
-  margin:0px;
-  border-bottom-style:solid;
-  border-bottom-width:2px;
-  border-bottom-color:#B3C3CF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  table-layout: fixed;
 }
 
 /* --- USER AREA -------------------*/
