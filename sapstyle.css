@@ -5,7 +5,9 @@
 
 .MobileUserArea, input {
   enabled:true;
-  width:device-width;
+  justify-content: center;
+  align-items: center;
+  width: device-width;
   height: device-height;
   display: flex;
   font-family:arial;
@@ -14,6 +16,8 @@
 
 .MobileUserArea, textarea {
   enabled:true;
+  justify-content: center;
+  align-items: center;
   width:device-width;
   height: device-height;
   display: flex;
@@ -26,10 +30,12 @@
 .MobileBody {
   enabled:true;  
   display: flex;
+  justify-content: center;
+  align-items: center;
   width:  device-width;
   height: device-height;
-  margin: 0px;
-  padding: 0px;
+  margin: 10px;
+  padding: 10px;
   border-width: 0px;
   background-color:#FFFFFF;
 }
@@ -37,11 +43,13 @@
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
   enabled:true;
+  justify-content: center;
+  align-items: center;
   display: flex;
   width: device-width;
   height: device-height;
-  padding:0px;
-  margin:0px;
+  padding:10px;
+  margin:10px;
   border:0px;
 }
 
@@ -57,8 +65,8 @@
   align-items: center;
   width:device-width;
   height: device-height;
-  overflow: hidden;
-  table-layout: fixed;
+  overflow: auto;
+  table-layout: auto;
 }
 
 /* --- USER AREA -------------------*/
@@ -66,10 +74,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width:device-width;
+  width: device-width;
   height: device-height;
-  overflow: hidden;
-  table-layout: fixed;
+  overflow: auto;
+  table-layout: auto;
 }
 
 /* ---------------------------------*/
@@ -146,7 +154,7 @@
   align-items: center;
   width:device-width;
   height: device-height;
-  overflow: hidden;
+  overflow: auto;
   table-layout: auto;
 }
 
@@ -174,7 +182,7 @@
 
 .MobileFrameHeader {
   enabled:true;
-  width:100%;
+  width:device-height;
   background-color:#FFFFFF;
   font-weight:bold;
   padding:0px;
@@ -205,7 +213,7 @@
 /* --- EDIT FIELD ------------------*/
 .MobileEdit {
   enabled:true;
-  width:100%;
+  width:50%;
 }
 
 .MobileEditMultiline {
@@ -421,13 +429,13 @@
 /* --- LABEL FIELD -----------------*/
 .MobileLabel {
   enabled:true;
-  width:100%;
-  white-space:nowrap;
+  width: 50%;
+  white-space:wrap;
 }
 
 .MobileLabelHighlighted {
   enabled:true;
-  width:100%;
+  width:50%;
   white-space:nowrap;
   color:blue;
 }
