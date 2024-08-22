@@ -127,6 +127,7 @@
 /*----------------------------------*/
 
 /* --- SUBSCREENS ------------------*/
+/* <<THIS WORKS>> */
 .MobileSubScreen {
   enabled:true;
   display: flex;
@@ -176,7 +177,8 @@
 .MobileButton {
   enabled:true;
   background-color:#FFFFFF;
-  width:100%;
+  width:50%;
+  height: 100px;
   font-weight: 400;
 }
 
