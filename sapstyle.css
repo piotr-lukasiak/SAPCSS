@@ -185,7 +185,8 @@
 /* --- DISABLED BUTTON -------------*/
 .MobileButtonDisabled {
   enabled:true;
-  width:100%;
+  width:50%;
+  height: 100px;
 }
 
 /* --- EDIT FIELD ------------------*/
