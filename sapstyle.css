@@ -52,11 +52,13 @@
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
-  enabled:true;
-  table-layout:fixed;
-  width:100%;
-  overflow-x:auto;
-  overflow-y:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  table-layout: fixed;
 }
 
 /* ---------------------------------*/
