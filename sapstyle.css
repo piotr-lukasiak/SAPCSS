@@ -9,7 +9,7 @@
   align-items: center;
   width: device-width;
   height: device-height;
-  display: flex;
+  display: grid;
   font-family:arial;
   font-size:100%;
 }
@@ -20,7 +20,7 @@
   align-items: center;
   width:device-width;
   height: device-height;
-  display: flex;
+  display: grid;
   font-family:arial;
   font-size:100%;
 }
@@ -29,7 +29,7 @@
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
   enabled:true;  
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   width:  device-width;
@@ -45,7 +45,7 @@
   enabled:true;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: grid;
   width: device-width;
   height: device-height;
   padding:10px;
@@ -60,7 +60,7 @@
 /* --- CUA AREA --------------------*/
 .MobileCuaArea {
   enabled:true;  
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   width:device-width;
@@ -71,7 +71,7 @@
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   width: device-width;
@@ -149,7 +149,7 @@
 /* <<THIS WORKS>> */
 .MobileSubScreen {
   enabled:true;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   width:device-width;
@@ -161,7 +161,7 @@
 /* --- STEPLOOPS -------------------*/
 .MobileStepLoop {
   enabled:true;
-  display: flex;
+  display: grid;
   table-layout:auto;
   width:100%;
   padding:0px;
