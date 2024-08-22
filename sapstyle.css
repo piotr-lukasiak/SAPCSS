@@ -136,13 +136,13 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 /* --- STEPLOOPS -------------------*/
 .MobileStepLoop {
   enabled:true;
-  table-layout:fixed;
+  table-layout:auto;
   width:100%;
   padding:0px;
   margin:0px;
@@ -153,7 +153,7 @@
 .MobileFrame {
   enabled:true;
   width:100%;
-  table-layout:fixed;
+  table-layout:auto;
   background-color:#FFFFFF;
   padding:0px;
   margin:0px;
