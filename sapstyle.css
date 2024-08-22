@@ -5,12 +5,14 @@
 
 .MobileUserArea, input {
   enabled:true;
+  display: flex;
   font-family:arial;
   font-size:100%;
 }
 
 .MobileUserArea, textarea {
   enabled:true;
+  display: flex;
   font-family:arial;
   font-size:100%;
 }
@@ -19,7 +21,8 @@
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
   enabled:true;  
-  width:device-width;
+  display: flex;
+  width:d evice-width;
   height: device-height;
   margin: 0px;
   padding: 0px;
@@ -30,6 +33,7 @@
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
   enabled:true;
+  display: flex;
   width:device-width;
   height: device-height;
   padding:0px;
@@ -121,7 +125,7 @@
 /* --- Basic Row -------------------*/
 .MobileRow {
   enabled:true;
-  white-space:nowrap;
+  white-space:wrap;
   vertical-align:middle;
 }
 
@@ -145,6 +149,7 @@
 /* --- STEPLOOPS -------------------*/
 .MobileStepLoop {
   enabled:true;
+  display: flex;
   table-layout:auto;
   width:100%;
   padding:0px;
@@ -155,7 +160,8 @@
 /* --- FRAME -----------------------*/
 .MobileFrame {
   enabled:true;
-  width:100%;
+  display: flex;
+  width:device-width;
   table-layout:auto;
   background-color:#FFFFFF;
   padding:0px;
