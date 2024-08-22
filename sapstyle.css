@@ -4,7 +4,7 @@
 @import url("../ALV_GRID.CSS");
 
 .MobileUserArea, input {
-  enabled:true;
+  enabled: false;
   justify-content: center;
   align-items: center;
   width: device-width;
@@ -15,7 +15,7 @@
 }
 
 .MobileUserArea, textarea {
-  enabled:true;
+  enabled: false;
   justify-content: center;
   align-items: center;
   width:device-width;
