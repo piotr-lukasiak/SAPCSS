@@ -5,6 +5,8 @@
 
 .MobileUserArea, input {
   enabled:true;
+  width:device-width;
+  height: device-height;
   display: flex;
   font-family:arial;
   font-size:100%;
@@ -51,8 +53,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width:device-width;
+  height: device-height;
   overflow: hidden;
   table-layout: fixed;
 }
@@ -62,8 +64,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width:device-width;
+  height: device-height;
   overflow: hidden;
   table-layout: fixed;
 }
