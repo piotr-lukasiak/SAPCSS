@@ -28,7 +28,7 @@
 
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
-  enabled:true;  
+  enabled:false;  
   display: grid;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
 
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
-  enabled:true;
+  enabled: false;
   justify-content: center;
   align-items: center;
   display: grid;
