@@ -148,7 +148,7 @@
 /* --- SUBSCREENS ------------------*/
 /* <<THIS WORKS>> */
 .MobileSubScreen {
-  enabled:false;
+  enabled:true;
   display: grid;
   justify-content: center;
   align-items: center;
