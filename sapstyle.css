@@ -86,6 +86,62 @@ html, body {
     width: 100vw;
     height: 100vh;
   }
+  
+  /* Adjust font sizes for better readability in portrait mode */
+  body {
+    font-size: 14px;
+  }
+  
+  .MobileButton, .MobileButtonDisabled {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, .MobileEditMultilineHighlighted {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .MobileF4Button, .MobileF4ButtonDisabled {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  .MobileLabel, .MobileLabelHighlighted, .MobileRadioLabel, .MobileCheckLabel {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+}
+
+/* Add general responsive adjustments */
+.MobileCuaArea, .MobileUserArea, .MobileSubScreen {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.MobileFrame, .MobileStepLoop {
+  flex-direction: column;
+}
+
+/* Adjust input fields for better responsiveness */
+.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, .MobileEditMultilineHighlighted,
+.MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure buttons don't overflow */
+.MobileButton, .MobileButtonDisabled, .MobileF4Button, .MobileF4ButtonDisabled {
+  max-width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Adjust system message for better fit */
+.MobileSysList, .MobileSysListTitle {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /*----------------------------------*/
