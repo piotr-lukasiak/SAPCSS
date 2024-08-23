@@ -9,7 +9,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
+  background-color: #f8f9fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,13 +25,11 @@ html, body {
     "footer footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  height: 90vh;
-  background: linear-gradient(135deg, #e6f0ff, #f5f5f5);
+  width: 95vw;
+  height: 95vh;
+  background: linear-gradient(135deg, #e0e7ef, #ffffff);
   padding: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   box-sizing: border-box;
   gap: 20px;
@@ -44,9 +42,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  background-color: #007BFF;
-  background: linear-gradient(135deg, #6fb3ff, #007BFF);
+  padding: 20px;
+  background-color: #6c757d;
+  background: linear-gradient(135deg, #868e96, #6c757d);
   color: #ffffff;
   font-weight: bold;
   border-radius: 8px;
@@ -82,9 +80,9 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  background-color: #007BFF;
-  background: linear-gradient(135deg, #007BFF, #6fb3ff);
+  padding: 20px;
+  background-color: #6c757d;
+  background: linear-gradient(135deg, #6c757d, #868e96);
   color: #ffffff;
   border-radius: 8px;
 }
@@ -93,35 +91,36 @@ html, body {
 .MobileButton, .MobileButtonDisabled {
   enabled: true;
   width: 100%;
-  padding: 15px;
-  background-color: #28a745;
-  background: linear-gradient(135deg, #6fd397, #28a745);
+  padding: 20px;
+  background-color: #5a6268;
+  background: linear-gradient(135deg, #adb5bd, #5a6268);
   color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: background-color 0.3s, transform 0.2s;
+  box-sizing: border-box;
 }
 
 .MobileButtonDisabled {
-  background-color: #CCCCCC;
-  background: linear-gradient(135deg, #dddddd, #cccccc);
+  background-color: #d6d8db;
+  background: linear-gradient(135deg, #e9ecef, #d6d8db);
   cursor: not-allowed;
 }
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
-  background-color: #218838;
-  background: linear-gradient(135deg, #57c97a, #218838);
-  transform: scale(1.02);
+  background-color: #495057;
+  background: linear-gradient(135deg, #868e96, #495057);
+  transform: scale(1.03);
 }
 
 /* --- FORM ELEMENTS ----------------*/
 .MobileLabel, .MobileEdit {
   enabled: true;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -129,12 +128,12 @@ html, body {
 .MobileLabel {
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333333;
+  color: #343a40;
 }
 
 .MobileEdit {
-  padding: 15px;
-  border: 2px solid #CCCCCC;
+  padding: 20px;
+  border: 2px solid #ced4da;
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 1.1rem;
@@ -142,17 +141,20 @@ html, body {
 
 .MobileEditDisabled {
   enabled: true;
-  background-color: #F5F9FC;
-  color: #808080;
+  background-color: #f1f3f5;
+  color: #868e96;
 }
 
 .MobileF4Button, .MobileF4ButtonDisabled {
   enabled: true;
   width: auto;
   margin-top: 10px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-size: 1rem;
   border-radius: 8px;
+  background-color: #5a6268;
+  background: linear-gradient(135deg, #adb5bd, #5a6268);
+  color: #ffffff;
 }
 
 /* --- SYSTEM MESSAGE / MAIL ---------------------*/
@@ -160,9 +162,9 @@ html, body {
   enabled: true;
   width: 100%;
   max-width: 600px;
-  background-color: #FFFFFF;
-  padding: 15px;
-  border: 2px solid #B3C3CF;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 2px solid #ced4da;
   border-radius: 8px;
   box-sizing: border-box;
 }
@@ -170,7 +172,7 @@ html, body {
 .MobileSysListTitle {
   enabled: true;
   width: 100%;
-  background-color: #A3C1E4;
+  background-color: #adb5bd;
   font-weight: bold;
   padding: 10px;
   border-radius: 8px;
