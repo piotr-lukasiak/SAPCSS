@@ -4,18 +4,16 @@
 @import url("../ALV_GRID.CSS");
 
 html, body {
-  enabled:true;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .MobileUserArea, input, textarea {
-  enabled:true;
   width: 100%;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -24,18 +22,16 @@ html, body {
 
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
-  enabled:true;
   width: 100%;
   height: 100%;
   padding: 10px;
   background-color: #ffffff;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
-  enabled:true;
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -43,6 +39,7 @@ html, body {
   background: linear-gradient(135deg, #e0e7ef, #ffffff);
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /*----------------------------------*/
@@ -51,28 +48,24 @@ html, body {
 
 @media (orientation: landscape) {
   .MobileScreen {
-    enabled:true;
     flex-direction: row;
   }
 }
 
 @media (orientation: portrait) {
   .MobileScreen {
-    enabled:true;
     flex-direction: column;
   }
 }
 
 /* Add general responsive adjustments */
 .MobileCuaArea, .MobileUserArea, .MobileSubScreen {
-  enabled:true;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
 
 .MobileFrame, .MobileStepLoop {
-  enabled:true;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -81,7 +74,6 @@ html, body {
 /* Adjust input fields for better responsiveness */
 .MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, .MobileEditMultilineHighlighted,
 .MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
-  enabled:true;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -90,7 +82,6 @@ html, body {
 
 /* Ensure buttons don't overflow */
 .MobileButton, .MobileButtonDisabled, .MobileF4Button, .MobileF4ButtonDisabled {
-  enabled:true;
   width: 100%;
   max-width: 100%;
   white-space: normal;
@@ -100,7 +91,6 @@ html, body {
 
 /* Adjust system message for better fit */
 .MobileSysList, .MobileSysListTitle {
-  enabled:true;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -112,18 +102,16 @@ html, body {
 
 /* --- CUA AREA --------------------*/
 .MobileCuaArea {
-  enabled:true;
   width: 100%;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
   padding: 10px;
   box-sizing: border-box;
 }
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
-  enabled:true;
   width: 100%;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
   padding: 10px;
   box-sizing: border-box;
 }
@@ -134,7 +122,6 @@ html, body {
 
 /* --- MESSAGE ---------------------*/
 .MobileMessageScreen {
-  enabled:true;
   width: 100%;
   background-color: #ffffff;
   padding: 10px;
@@ -144,20 +131,17 @@ html, body {
 }
 
 .MobileMessageLine {
-  enabled:true;
   margin-bottom: 5px;
 }
 
 /* --- MESSAGE ---------------------*/
 .MobileMessageLogo {
-  enabled:true;
   vertical-align: middle;
   padding: 0 5px;
 }
 
 /* --- TITLE -----------------------*/
 .MobileWindowTitle {
-  enabled:true;
   font-weight: bold;
   font-size: 1.2em;
   padding: 10px 0;
@@ -168,7 +152,6 @@ html, body {
 
 /* --- LOGO im Header --------------*/
 .MobileHeaderLogo {
-  enabled:true;
   background-color: #ffffff;
   vertical-align: middle;
   height: 16px;
@@ -177,14 +160,12 @@ html, body {
 
 /* --- Include Frame ---------------*/
 .MobileIncludeFrame {
-  enabled:true;
   width: 100%;
   margin-bottom: 10px;
 }
 
 /* --- Basic Row -------------------*/
 .MobileRow {
-  enabled:true;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -195,15 +176,13 @@ html, body {
 
 /* --- SUBSCREENS ------------------*/
 .MobileSubScreen {
-  enabled:true;
   width: 100%;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
   box-sizing: border-box;
 }
 
 /* --- STEPLOOPS -------------------*/
 .MobileStepLoop {
-  enabled:true;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -213,7 +192,6 @@ html, body {
 
 /* --- FRAME -----------------------*/
 .MobileFrame {
-  enabled:true;
   width: 100%;
   background-color: #ffffff;
   padding: 10px;
@@ -222,7 +200,6 @@ html, body {
 }
 
 .MobileFrameHeader {
-  enabled:true;
   width: 100%;
   background-color: #ffffff;
   font-weight: bold;
@@ -232,7 +209,6 @@ html, body {
 
 /* --- BUTTONS ---------------------*/
 .MobileButton, .MobileButtonDisabled {
-  enabled:true;
   width: 100%;
   padding: 15px;
   background-color: #5a6268;
@@ -248,14 +224,12 @@ html, body {
 }
 
 .MobileButtonDisabled {
-  enabled:true;
   background-color: #d6d8db;
   background: linear-gradient(135deg, #e9ecef, #d6d8db);
   cursor: not-allowed;
 }
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
-  enabled:true;
   background-color: #495057;
   background: linear-gradient(135deg, #868e96, #495057);
   transform: scale(1.03);
@@ -263,7 +237,6 @@ html, body {
 
 /* --- EDIT FIELDS ------------------*/
 .MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, .MobileEditMultilineHighlighted {
-  enabled:true;
   width: 100%;
   padding: 10px;
   border: 2px solid #ced4da;
@@ -274,12 +247,10 @@ html, body {
 }
 
 .MobileEdit:focus, .MobileEditMultiline:focus, .MobileEditMultilineRequired:focus, .MobileEditRequired:focus, .MobileEditHighlighted:focus, .MobileEditRequiredHighlighted:focus, .MobileEditMultilineHighlighted:focus {
-  enabled:true;
   border-color: #495057;
 }
 
 .MobileEditDisabled, .MobileEditMultilineDisabled, .MobileEditRequiredDisabled, .MobileEditHighlightedDisabled, .MobileEditRequiredHighlightedDisabled, .MobileEditMultilineHighlightedDisabled {
-  enabled:true;
   background-color: #f1f3f5;
   color: #868e96;
   pointer-events: none;
@@ -288,7 +259,6 @@ html, body {
 
 /* --- F4 BUTTON -------------------*/
 .MobileF4Button, .MobileF4ButtonDisabled {
-  enabled:true;
   width: auto;
   margin-top: 5px;
   padding: 8px 12px;
@@ -301,7 +271,6 @@ html, body {
 
 /* --- LABEL FIELD -----------------*/
 .MobileLabel, .MobileLabelHighlighted, .MobileRadioLabel, .MobileCheckLabel {
-  enabled:true;
   display: block;
   width: 100%;
   margin-bottom: 5px;
@@ -311,20 +280,17 @@ html, body {
 }
 
 .MobileLabelHighlighted {
-  enabled:true;
   color: blue;
 }
 
 /* --- RADIOBOX --------------------*/
 .MobileRadioButton {
-  enabled:true;
   vertical-align: middle;
   margin-right: 5px;
 }
 
 /* --- LISTBOX ---------------------*/
 .MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
-  enabled:true;
   width: 100%;
   border: 2px solid #ced4da;
   border-radius: 8px;
@@ -334,7 +300,6 @@ html, body {
 }
 
 .MobileListboxRequiredDisabled, .MobileListboxRequiredHighlightedDisabled, .MobileListboxHighlightedDisabled, .MobileListboxDisabled {
-  enabled:true;
   width: 100%;
   border-color: #ced4da;
   color: #868e96;
@@ -343,7 +308,6 @@ html, body {
 
 /* --- SYSTEM MESSAGE / MAIL -------*/
 .MobileSysList {
-  enabled:true;
   width: 100%;
   background-color: #ffffff;
   padding: 15px;
@@ -351,11 +315,10 @@ html, body {
   border: 2px solid #b3c3cf;
   border-radius: 8px;
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow-y: hidden; /* Prevent scrolling */
 }
 
 .MobileSysListTitle {
-  enabled:true;
   width: 100%;
   background-color: #a3c1e4;
   font-weight: bold;
