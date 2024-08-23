@@ -13,6 +13,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Ensure no overflow */
 }
 
 /* --- MAIN SCREEN -----------------*/
@@ -25,14 +26,13 @@ html, body {
     "footer footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
-  width: 95vw;
-  height: 95vh;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(135deg, #e0e7ef, #ffffff);
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  padding: 10px;
   box-sizing: border-box;
-  gap: 20px;
+  gap: 10px;
+  overflow: hidden;
 }
 
 /* --- HEADER ----------------------*/
@@ -42,7 +42,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #6c757d;
   background: linear-gradient(135deg, #868e96, #6c757d);
   color: #ffffff;
@@ -59,7 +59,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  overflow-y: auto; /* Allow scroll if content overflows */
 }
 
 /* --- SIDEBAR ---------------------*/
@@ -70,7 +71,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  overflow-y: auto; /* Allow scroll if content overflows */
 }
 
 /* --- FOOTER ----------------------*/
@@ -80,7 +82,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #6c757d;
   background: linear-gradient(135deg, #6c757d, #868e96);
   color: #ffffff;
@@ -91,7 +93,7 @@ html, body {
 .MobileButton, .MobileButtonDisabled {
   enabled: true;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   background-color: #5a6268;
   background: linear-gradient(135deg, #adb5bd, #5a6268);
   color: #ffffff;
@@ -119,37 +121,50 @@ html, body {
 /* --- FORM ELEMENTS ----------------*/
 .MobileLabel, .MobileEdit {
   enabled: true;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 15px;
-  text-align: center;
+  display: inline-block;
+  width: auto;
+  max-width: 100%; /* Prevent overflow */
+  margin-bottom: 10px;
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .MobileLabel {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #343a40;
+  white-space: nowrap; /* Prevent label from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .MobileEdit {
-  padding: 20px;
+  padding: 15px;
   border: 2px solid #ced4da;
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 1.1rem;
+  width: 100%; /* Takes full width of container */
+  max-width: 100%; /* Prevents from overflowing */
+  resize: vertical; /* Allow vertical resize for multiline */
+}
+
+.MobileEdit:focus {
+  border-color: #495057;
 }
 
 .MobileEditDisabled {
   enabled: true;
   background-color: #f1f3f5;
   color: #868e96;
+  pointer-events: none; /* Disable interaction */
 }
 
 .MobileF4Button, .MobileF4ButtonDisabled {
   enabled: true;
   width: auto;
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 1rem;
   border-radius: 8px;
   background-color: #5a6268;
@@ -163,10 +178,11 @@ html, body {
   width: 100%;
   max-width: 600px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 15px;
   border: 2px solid #ced4da;
   border-radius: 8px;
   box-sizing: border-box;
+  overflow-y: auto; /* Scroll if content overflows */
 }
 
 .MobileSysListTitle {
@@ -177,4 +193,5 @@ html, body {
   padding: 10px;
   border-radius: 8px;
   text-align: center;
+  box-sizing: border-box;
 }
