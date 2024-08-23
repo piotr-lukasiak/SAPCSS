@@ -8,18 +8,14 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-}
-
-body {
-  enabled: true;
-  display: grid;
-  place-items: center;
-  margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* --- MAIN SCREEN -----------------*/
 .MobileScreen {
   enabled: true;
   display: grid;
@@ -28,13 +24,13 @@ body {
     "main sidebar"
     "footer footer";
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   width: 90vw;
   height: 90vh;
-  background-color: #ffffff;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  background: linear-gradient(135deg, #e6f0ff, #f5f5f5);
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
   box-sizing: border-box;
   gap: 20px;
 }
@@ -45,22 +41,25 @@ body {
   grid-area: header;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: center;
+  padding: 15px;
   background-color: #007BFF;
+  background: linear-gradient(135deg, #6fb3ff, #007BFF);
   color: #ffffff;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 /* --- MAIN CONTENT ----------------*/
 .MobileMain {
   enabled: true;
   grid-area: main;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* --- SIDEBAR ---------------------*/
@@ -69,7 +68,9 @@ body {
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* --- FOOTER ----------------------*/
@@ -77,55 +78,64 @@ body {
   enabled: true;
   grid-area: footer;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   background-color: #007BFF;
+  background: linear-gradient(135deg, #007BFF, #6fb3ff);
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 /* --- BUTTONS ---------------------*/
 .MobileButton, .MobileButtonDisabled {
   enabled: true;
-  padding: 10px 20px;
-  background-color: #007BFF;
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  background: linear-gradient(135deg, #6fd397, #28a745);
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .MobileButtonDisabled {
   background-color: #CCCCCC;
+  background: linear-gradient(135deg, #dddddd, #cccccc);
   cursor: not-allowed;
 }
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
-  background-color: #0056b3;
+  background-color: #218838;
+  background: linear-gradient(135deg, #57c97a, #218838);
+  transform: scale(1.02);
 }
 
 /* --- FORM ELEMENTS ----------------*/
 .MobileLabel, .MobileEdit {
   enabled: true;
-  display: block;
   width: 100%;
-  margin-bottom: 10px;
+  max-width: 500px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .MobileLabel {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: #333333;
 }
 
 .MobileEdit {
-  padding: 10px;
-  border: 1px solid #CCCCCC;
-  border-radius: 5px;
+  padding: 15px;
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .MobileEditDisabled {
@@ -138,18 +148,20 @@ body {
   enabled: true;
   width: auto;
   margin-top: 10px;
-  padding: 5px 10px;
-  font-size: 0.9rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
 }
 
 /* --- SYSTEM MESSAGE / MAIL ---------------------*/
 .MobileSysList {
   enabled: true;
   width: 100%;
+  max-width: 600px;
   background-color: #FFFFFF;
-  padding: 10px;
+  padding: 15px;
   border: 2px solid #B3C3CF;
-  border-radius: 5px;
+  border-radius: 8px;
   box-sizing: border-box;
 }
 
@@ -158,6 +170,7 @@ body {
   width: 100%;
   background-color: #A3C1E4;
   font-weight: bold;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
 }
