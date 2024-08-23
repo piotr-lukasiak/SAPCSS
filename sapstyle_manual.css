@@ -4,7 +4,7 @@
 @import url("../ALV_GRID.CSS");
 
 .MobileUserArea, input {
-  enabled: false;
+  enabled: true;
   justify-content: center;
   align-items: center;
   width: device-width;
@@ -15,7 +15,7 @@
 }
 
 .MobileUserArea, textarea {
-  enabled: false;
+  enabled: true;
   justify-content: center;
   align-items: center;
   width:device-width;
@@ -28,7 +28,7 @@
 
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
-  enabled:false;  
+  enabled:true;  
   display: grid;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
 
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
-  enabled: false;
+  enabled: true;
   justify-content: center;
   align-items: center;
   display: grid;
@@ -71,6 +71,7 @@
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
+  enabled:true;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -132,6 +133,7 @@
 
 /* --- Include Frame ---------------*/
 .MobileIncludeFrame {
+  enabled:true;
 }
 
 /* --- Basic Row -------------------*/
@@ -217,9 +219,11 @@
 }
 
 .MobileEditMultiline {
+  enabled:true;
 }
 
 .MobileEditMultilineDisabled {
+  enabled:true;
 }
 
 .MobileEditMultilineHighlighted {
@@ -306,99 +310,125 @@
 
 /* --- F4 BUTTON -------------------*/
 .MobileF4Button {
+  enabled:true;
   width:1em;
 }
 
 .MobileF4ButtonDisabled {
+  enabled:true;
   width:1em;
 }
 
 /* --- SEARCHELP BUTTONS -----------*/
 .MobileSearchhelpButton_Search {
+  enabled:true;
 }
 
 .MobileSearchhelpButton_SearchDisabled {
+  enabled:true;
 }
 
 .MobileSearchhelpButton_Cancel {
+  enabled:true;
 }
 
 .MobileSearchhelpButton_Options {
+  enabled:true;
 }
 
 .MobileSearchhelpButton_Selection {
+  enabled:true;
 }
 
 .MobileSearchhelpButton_Sort {
+  enabled:true;
 }
 
 .MobileSearchhelpButton {
+  enabled:true;
 }
 
 /* --- SEARCHELP EDIT FIELD --------*/
 .MobileSearchhelpEdit {
+  enabled:true;
 }
 
 .MobileSearchHelpBody {
+  enabled:true;
 }
 
 .MobileSearchHelpScreen {
+  enabled:true;
 }
 
 .MobileSearchHelpUserArea {
+  enabled:true;
 }
 
 .MobileSearchHelpSortingRow {
+  enabled:true;
   background-color: #f2e1af;
 }
 
 .MobileSearchHelpRow {
+  enabled:true;
 }
 
 .MobileSearchHelpRow2 {
+  enabled:true;
   background-color: #D9E5F2;
 }
 
 .MobileSearchHelpFindResults {
+  enabled:true;
 }
 
 .MobileSearchHelpMessageLine {
+  enabled:true;
   color: red; font-weight: bold;
 }
 
 /* --- F4 HELP FIELD ---------------*/
 .MobileF4 {
+  enabled:true;
 }
 
 .MobileF4Disabled {
+  enabled:true;
 }
 
 /* required */
 .MobileF4Required {
+  enabled:true;
   border-color: blue;
 }
 
 .MobileF4RequiredDisabled {
+  enabled:true;
   border-color: blue;
 }
 
 /* required + highlighted */
 .MobileF4RequiredHighlighted {
+  enabled:true;
   border-color:blue;
   color:blue;
 }
 
 .MobileF4RequiredHighlightedDisabled {
+  enabled:true;
   border-color:blue;
   color:blue;
 }
 
 /* highlighlighted */
 .MobileF4Highlighted {
+  enabled:true;
   color:blue;
 }
 
 .MobileF4HighlightedDisabled {
+  enabled:true;
   color:blue;
 }
 
@@ -447,6 +477,7 @@
 }
 
 .MobileRadioLabel {
+  enabled:true;
   white-space:nowrap;
 }
 
@@ -475,11 +506,13 @@
 }
 
 .MobileListboxRequired {
+  enabled:true;
   width:100%;
   border-color:blue;
 }
 
 .MobileListboxRequiredDisabled {
+  enabled:true;
   width:100%;
   border-color:blue;
 }
