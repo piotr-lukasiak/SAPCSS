@@ -190,15 +190,10 @@ html, body {
 .MobileRow {
   enabled: true;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   height: auto;
-  min-height: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box;
-  overflow: hidden;
-  line-height: 0; /* Minimize space due to line-height */
-  visibility: visible; /* Ensure visibility unless explicitly hidden */
-  white-space: normal; /* Normal whitespace behavior */
+  min-height: 0;
+  padding: 0; 
 }
 /*----------------------------------*/
 /* DYNPRO ELEMENTS                  */
