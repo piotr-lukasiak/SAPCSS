@@ -191,6 +191,25 @@ html, body {
   enabled: true;
   width: 100%;
   margin-bottom: 10px;
+  height: auto;
+  min-height: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.MobileRow:empty {
+  display: none !important; /* Hide the element if it's considered empty */
+}
+
+/* Treat whitespace as irrelevant for display */
+.MobileRow {
+  white-space: nowrap; /* Prevent line breaks from causing extra space */
+}
+
+.MobileRow:empty:before {
+  content: '\200B'; /* Insert a zero-width space to handle empty cases */
 }
 
 /*----------------------------------*/
