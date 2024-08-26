@@ -191,22 +191,28 @@ html, body {
   enabled: true;
   width: 100%;
   margin-bottom: 10px;
-  height: auto; /* Adjust height based on content */
-  min-height: 0 !important; /* Force minimum height to zero */
-  padding: 0 !important; /* Ensure no padding is adding space */
-  box-sizing: border-box; /* Include padding and border in width and height */
-  overflow: hidden; /* Prevent overflow content from taking up space */
-  line-height: 0; /* Collapse line height to reduce space */
-  visibility: hidden; /* Hide the element if it’s empty */
+  height: auto;
+  min-height: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 0; /* Minimize space due to line-height */
+  visibility: visible; /* Ensure visibility unless explicitly hidden */
+  white-space: normal; /* Normal whitespace behavior */
 }
 
-.MobileRow:empty {
-  display: none !important; /* Remove the element if it's empty */
+/* Treat whitespace-only MobileRow as effectively empty */
+.MobileRow:empty,
+.MobileRow:empty:before {
+  display: none !important; /* Hide if truly empty */
 }
 
-/* Treat whitespace as irrelevant for display */
-.MobileRow {
-  white-space: nowrap; /* Prevent line breaks from causing extra space */
+/* This rule ensures that elements with just whitespace are not considered empty */
+.MobileRow:empty:before {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
 }
 
 
