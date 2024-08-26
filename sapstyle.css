@@ -192,24 +192,19 @@ html, body {
   width: 100%;
   margin-bottom: 10px;
   height: 1px;
-  min-height: 0 !important;
-  padding: 0 !important;
+  min-height: 0;
+  padding: 10px;
   box-sizing: border-box;
   overflow: hidden;
   line-height: 0;
 }
 
-.MobileRow:empty {
-  display: none !important; /* Hide the element if it's considered empty */
-}
-
-/* Treat whitespace as irrelevant for display */
-.MobileRow {
-  white-space: nowrap; /* Prevent line breaks from causing extra space */
-}
-
-.MobileRow:empty:before {
-  content: '\200B'; /* Insert a zero-width space to handle empty cases */
+.MobileRow span {
+  /* Add your styles here */
+  display: inline-block; /* Example: ensure the span is treated as a block-level element */
+  margin: 0;
+  padding: 0;
+  line-height: 1; /* Adjust line height if necessary */
 }
 
 /*----------------------------------*/
