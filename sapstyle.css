@@ -191,7 +191,7 @@ html, body {
   enabled: true;
   width: 100%;
   margin-bottom: 1px;
-  height: auto;
+  height: 10px;
   min-height: 0;
   padding: 0; 
 }
