@@ -177,6 +177,8 @@ html, body {
 /* --- SUBSCREENS ------------------*/
 .MobileSubScreen {
   width: 100%;
+  height: auto; /* Allow element to expand based on content */
+  min-height: 0; /* Minimal height when empty */
   overflow: hidden; /* Prevent scrolling */
   box-sizing: border-box;
 }
@@ -197,6 +199,8 @@ html, body {
   padding: 10px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  height: auto; /* Allow element to expand based on content */
+  min-height: 0; /* Minimal height when empty */
 }
 
 .MobileFrameHeader {
@@ -277,6 +281,8 @@ html, body {
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: auto; /* Allow element to expand based on content */
+  min-height: 0; /* Minimal height when empty */
 }
 
 .MobileLabelHighlighted {
@@ -316,6 +322,8 @@ html, body {
   border-radius: 8px;
   box-sizing: border-box;
   overflow-y: hidden; /* Prevent scrolling */
+  height: auto; /* Allow element to expand based on content */
+  min-height: 0; /* Minimal height when empty */
 }
 
 .MobileSysListTitle {
