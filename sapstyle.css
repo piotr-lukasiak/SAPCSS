@@ -191,6 +191,9 @@ html, body {
   enabled: true;
   width: 100%;
   margin-bottom: 10px;
+  height: auto; /* Allow height to scale based on content */
+  min-height: 0; /* Ensure a minimal height when empty */
+  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
 }
 
 /*----------------------------------*/
