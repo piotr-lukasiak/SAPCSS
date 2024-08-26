@@ -191,9 +191,12 @@ html, body {
   enabled: true;
   width: 100%;
   margin-bottom: 10px;
-  height: auto; /* Allow height to scale based on content */
-  min-height: 0; /* Ensure a minimal height when empty */
-  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
+  height: auto; /* Height adjusts based on content */
+  min-height: 0; /* Minimum height when empty */
+  padding: 0; /* No padding to avoid extra space */
+  box-sizing: border-box; /* Include padding and border in width and height */
+  overflow: hidden; /* Hide any overflow content */
+  line-height: 0; /* Reduce line-height to minimize space when empty */
 }
 
 /*----------------------------------*/
