@@ -198,6 +198,7 @@ html, body {
   overflow: hidden; /* Prevent overflow content from taking up space */
   line-height: 0; /* Collapse line height to reduce space */
   visibility: hidden; /* Hide the element if it’s empty */
+  white-space: nowrap;
 }
 
 .MobileRow:empty {
