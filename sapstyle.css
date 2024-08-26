@@ -198,12 +198,17 @@ html, body {
   overflow: hidden; /* Prevent overflow content from taking up space */
   line-height: 0; /* Collapse line height to reduce space */
   visibility: hidden; /* Hide the element if it’s empty */
-  white-space: nowrap;
 }
 
 .MobileRow:empty {
   display: none !important; /* Remove the element if it's empty */
 }
+
+/* Treat whitespace as irrelevant for display */
+.MobileRow {
+  white-space: nowrap; /* Prevent line breaks from causing extra space */
+}
+
 
 /*----------------------------------*/
 /* DYNPRO ELEMENTS                  */
