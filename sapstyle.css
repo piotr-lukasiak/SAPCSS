@@ -193,12 +193,20 @@ html, body {
   margin-bottom: 10px;
 }
 
-.MobileRow span {
-  /* Add your styles here */
-  display: inline-block; /* Example: ensure the span is treated as a block-level element */
-  margin: 0;
-  padding: 0;
-  line-height: 1; /* Adjust line height if necessary */
+span:not([class]) {
+  enabled: true;
+  display: inline-block; /* Treat as a block-level element for better control */
+  width: auto; /* Adjust width based on content */
+  height: auto; /* Adjust height based on content */
+  min-width: 0; /* Minimize width */
+  min-height: 0; /* Minimize height */
+  padding: 0; /* Remove padding to reduce size */
+  margin: 0; /* Remove margin to reduce size */
+  line-height: 1; /* Minimize line-height to reduce vertical space */
+  font-size: inherit; /* Inherit font size to avoid unnecessary scaling */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  white-space: nowrap; /* Prevent line breaks to minimize height */
+  text-overflow: ellipsis; /* Handle overflow text with ellipsis */
 }
 
 /*----------------------------------*/
