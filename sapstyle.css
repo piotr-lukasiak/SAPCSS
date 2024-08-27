@@ -206,6 +206,15 @@ html, body {
   enabled: true;
   width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of elements */
+}
+
+.MobileRow .MobileRow {
+  enabled: true;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Ensure elements do not wrap to the next line */
 }
 
 span:not([class]) {
