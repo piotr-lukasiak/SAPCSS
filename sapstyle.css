@@ -207,14 +207,14 @@ html, body {
   width: 100%;
   margin-bottom: 10px;
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping of elements */
+  flex-wrap: wrap; /* Prevent wrapping of elements */
 }
 
 .MobileRow .MobileRow {
   enabled: true;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; /* Ensure elements do not wrap to the next line */
+  flex-wrap: wrap;
 }
 
 span:not([class]) {
