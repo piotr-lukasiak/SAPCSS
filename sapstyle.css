@@ -300,6 +300,13 @@ html, body {
   color: #868e96;
   pointer-events: none;
   border: 1px solid #808080;
+  width: auto; /* Allow width to adjust based on content */
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 0; /* Ensure minimum height is zero */
+  padding: 10px; /* Adjust padding to your preference */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  overflow: visible; /* Ensure content is not clipped */
+  white-space: normal; /* Allow text to wrap within the element */
 }
 
 /* --- F4 BUTTON -------------------*/
