@@ -328,7 +328,9 @@ html, body {
   display: block;
   width: 100%;
   margin-bottom: 5px;
-  text-align: left;
+  text-align: center; /* Center the text */
+  font-weight: bold; /* Bold the text */
+  font-family: "Courier New", Courier, monospace; /* Set to a technical font */
   overflow: hidden;
   text-overflow: ellipsis;
   height: auto; /* Allow label to expand based on content */
