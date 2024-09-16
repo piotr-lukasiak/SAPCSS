@@ -17,5 +17,5 @@ function captureBackButton() {
 // Initialize back button capture when the page loads
 window.onload = function() {
     captureBackButton();
-    alert("works")
+    alert("works");
 };
