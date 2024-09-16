@@ -1,3 +1,4 @@
+alert("WORKS")
 window.addEventListener('popstate', function(event) {
     // Prevent the back navigation
     event.preventDefault();
