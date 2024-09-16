@@ -2,7 +2,6 @@
 
     document.addEventListener('popstate', function(event) {
         // This will capture the back button and swipe back events
-        alert("TEST");
         event.preventDefault();
 
         // Send F7 key instead of going back
