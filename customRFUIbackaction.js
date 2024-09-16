@@ -1,20 +1,21 @@
-function captureAndroidBackButton() {
-    // Push an initial state to prevent back navigation
+function captureBackButton() {
+    // Push an initial history state
     history.pushState(null, null, window.location.href);
 
     window.addEventListener('popstate', function(event) {
-        // Prevent the default back navigation action (including swipe back)
+        // This will capture the back button and swipe back events
         event.preventDefault();
 
-        // Send F7 key instead of navigating back
+        // Send F7 key instead of going back
         setFKey(7);
 
-        // Re-push the current state to ensure the back button is intercepted again
+        // Push a new state to prevent actual back navigation
         history.pushState(null, null, window.location.href);
     });
 }
 
-// Initialize the back button capture when the page loads
+// Initialize back button capture when the page loads
 window.onload = function() {
-    captureAndroidBackButton();
+    captureBackButton();
+    alert("works")
 };
