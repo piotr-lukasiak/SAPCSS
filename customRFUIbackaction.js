@@ -10,4 +10,4 @@
 
         // Push a new state to prevent actual back navigation
         history.pushState(null, null, window.location.href);
-    })
+    });
