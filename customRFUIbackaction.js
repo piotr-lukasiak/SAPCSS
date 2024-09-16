@@ -1,6 +1,6 @@
 function createF7Button() {
     const button = document.createElement('button');  // Create a button element
-    button.innerText = 'Send F7 Key';  // Set button text
+    button.innerText = 'BACK';  // Set button text
     button.style.position = 'fixed';  // Position the button fixed to the viewport
     button.style.bottom = '20px';     // Position 20px from the bottom
     button.style.right = '20px';      // Position 20px from the right
