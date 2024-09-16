@@ -1,6 +1,6 @@
     history.pushState(null, null, window.location.href);
 
-    window.addEventListener('popstate', function(event) {
+    document.addEventListener('popstate', function(event) {
         // This will capture the back button and swipe back events
         alert("TEST");
         event.preventDefault();
