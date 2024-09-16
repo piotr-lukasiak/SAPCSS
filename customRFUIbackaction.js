@@ -4,7 +4,6 @@ window.onload = function() {
 
 };
 
-
 function captureBackButton() {
     // Push an initial history state
     history.pushState(null, null, window.location.href);
@@ -20,9 +19,3 @@ function captureBackButton() {
         history.pushState(null, null, window.location.href);
     });
 }
-
-// Initialize back button capture when the page loads
-window.onload = function() {
-    captureBackButton();
-    alert("works");
-};
