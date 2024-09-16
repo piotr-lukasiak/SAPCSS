@@ -1,4 +1,3 @@
-alert("WORKS")
 function captureBackButton() {
     // Push an initial state to prevent the default back navigation
     history.pushState(null, null, window.location.href);
