@@ -1,13 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    captureBackButton();
-});
-
-function captureBackButton() {
-    // Push an initial history state
     history.pushState(null, null, window.location.href);
 
     window.addEventListener('popstate', function(event) {
         // This will capture the back button and swipe back events
+        alert("TEST")
         event.preventDefault();
 
         // Send F7 key instead of going back
@@ -15,5 +10,4 @@ function captureBackButton() {
 
         // Push a new state to prevent actual back navigation
         history.pushState(null, null, window.location.href);
-    });
-}
+    })
