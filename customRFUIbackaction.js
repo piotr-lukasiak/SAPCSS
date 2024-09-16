@@ -1,8 +1,7 @@
-window.onload = function() {
+window.addEventListener('load', function() {
     alert("works");
     captureBackButton();
-
-};
+});
 
 function captureBackButton() {
     // Push an initial history state
