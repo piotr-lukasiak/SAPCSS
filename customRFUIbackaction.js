@@ -1,3 +1,10 @@
+window.onload = function() {
+    alert("works");
+    captureBackButton();
+
+};
+
+
 function captureBackButton() {
     // Push an initial history state
     history.pushState(null, null, window.location.href);
