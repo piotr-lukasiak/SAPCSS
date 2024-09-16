@@ -1,5 +1,4 @@
-window.addEventListener('load', function() {
-    alert("works");
+document.addEventListener('DOMContentLoaded', function() {
     captureBackButton();
 });
 
