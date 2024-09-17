@@ -3,107 +3,127 @@
 /*----------------------------------*/
 @import url("../ALV_GRID.CSS");
 
+/* Root Variables for Theme Customization */
+:root {
+  /* Color Palette */
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #f0f2f5;
+  --surface-color: #ffffff;
+  --border-color: #ced4da;
+  --text-color: #333333;
+  --disabled-text-color: #868e96;
+  --disabled-bg-color: #f1f3f5;
+
+  /* Font Sizes */
+  --base-font-size: 16px;
+  --heading-font-size: 1.5rem;
+  --small-font-size: 0.875rem;
+
+  /* Spacing */
+  --base-padding: 1rem;
+  --base-margin: 1rem;
+
+  /* Border Radius */
+  --border-radius: 8px;
+
+  /* Shadows */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset and General Styles */
 html, body {
-  enabled: true;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-size: var(--base-font-size);
 }
 
-.MobileUserArea, input, textarea {
-  enabled: true;
+input, textarea {
   width: 100%;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: inherit;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
 /* --- MOBILE BODY -----------------*/
 .MobileBody {
-  enabled: true;
-  flex: 1; /* Allow body to grow and shrink */
+  flex: 1;
   width: 100%;
-  padding: 10px;
-  background-color: #ffffff;
+  padding: var(--base-padding);
+  background-color: var(--surface-color);
   box-sizing: border-box;
-  overflow: auto; /* Allow scrolling if content overflows */
+  overflow: auto;
 }
 
 /* --- MOBILE SCREEN ---------------*/
 .MobileScreen {
-  enabled: true;
   display: flex;
   flex-direction: column;
-  flex: 1; /* Ensure it takes available space */
+  flex: 1;
   width: 100%;
-  padding: 10px;
+  padding: var(--base-padding);
   box-sizing: border-box;
-  background: linear-gradient(135deg, #e0e7ef, #ffffff);
-  overflow: auto; /* Allow scrolling if content overflows */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  overflow: auto;
 }
 
-/*----------------------------------*/
 /* Responsive Design for Orientation */
-/*----------------------------------*/
-
 @media (orientation: landscape) {
   .MobileScreen {
-    enabled: true;
     flex-direction: row;
   }
 }
 
 @media (orientation: portrait) {
   .MobileScreen {
-    enabled: true;
     flex-direction: column;
   }
 }
 
-/* Add general responsive adjustments */
+/* General Responsive Adjustments */
 .MobileCuaArea, .MobileUserArea, .MobileSubScreen {
-  enabled: true;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
 
 .MobileFrame, .MobileStepLoop {
-  enabled: true;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Adjust input fields for better responsiveness */
-.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, .MobileEditMultilineHighlighted,
-.MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
-  enabled: true;
+/* Adjust Input Fields for Responsiveness */
+.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, 
+.MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, 
+.MobileEditMultilineHighlighted, .MobileListbox, .MobileListboxRequired, 
+.MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: var(--base-margin);
 }
 
-/* Ensure buttons don't overflow */
+/* Ensure Buttons Don't Overflow */
 .MobileButton, .MobileButtonDisabled, .MobileF4Button, .MobileF4ButtonDisabled {
-  enabled: true;
   width: 100%;
   max-width: 100%;
   white-space: normal;
   word-wrap: break-word;
-  margin-bottom: 10px;
+  margin-bottom: var(--base-margin);
 }
 
-/* Adjust system message for better fit */
+/* Adjust System Message for Better Fit */
 .MobileSysList, .MobileSysListTitle {
-  enabled: true;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -115,122 +135,109 @@ html, body {
 
 /* --- CUA AREA --------------------*/
 .MobileCuaArea {
-  enabled: true;
   width: 100%;
-  overflow: hidden; /* Prevent scrolling */
-  padding: 10px;
+  overflow: hidden;
+  padding: var(--base-padding);
   box-sizing: border-box;
 }
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
-  enabled: true;
-  flex: 1; /* Allow to grow and shrink */
+  flex: 1;
   width: 100%;
-  overflow: auto; /* Allow scrolling if content overflows */
-  padding: 10px;
+  overflow: auto;
+  padding: var(--base-padding);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
+
 @media (orientation: landscape) {
   .MobileUserArea {
-    enabled: true;
     flex-direction: row;
   }
 }
 
 @media (orientation: portrait) {
   .MobileUserArea {
-    enabled: true;
     flex-direction: column;
   }
 }
-
-
 
 /* ---------------------------------*/
 /* CUA AREA ELEMENTS                */
 /*----------------------------------*/
 
-/* --- MESSAGE ---------------------*/
+/* --- MESSAGE SCREEN --------------*/
 .MobileMessageScreen {
-  enabled: true;
   width: 100%;
-  background-color: #ffffff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #c40026;
+  background-color: var(--surface-color);
+  padding: var(--base-padding);
+  margin-bottom: var(--base-margin);
+  border-bottom: 2px solid var(--accent-color);
   box-sizing: border-box;
 }
 
 .MobileMessageLine {
-  enabled: true;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
-/* --- MESSAGE ---------------------*/
 .MobileMessageLogo {
-  enabled: true;
   vertical-align: middle;
-  padding: 0 5px;
+  padding: 0 0.5rem;
 }
 
 /* --- TITLE -----------------------*/
 .MobileWindowTitle {
-  enabled: true;
   font-weight: bold;
-  font-size: 1.2em;
-  padding: 10px 0;
+  font-size: var(--heading-font-size);
+  padding: 1rem 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-/* --- LOGO im Header --------------*/
+/* --- LOGO in Header --------------*/
 .MobileHeaderLogo {
-  enabled: true;
-  background-color: #ffffff;
+  background-color: var(--surface-color);
   vertical-align: middle;
-  height: 16px;
-  margin-right: 5px;
+  height: 1rem;
+  margin-right: 0.5rem;
 }
 
 /* --- Include Frame ---------------*/
 .MobileIncludeFrame {
-  enabled: true;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: var(--base-margin);
 }
 
 /* --- Basic Row -------------------*/
 .MobileRow {
-  enabled: true;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: var(--base-margin);
   display: flex;
-  flex-wrap: wrap; /* Prevent wrapping of elements */
+  flex-wrap: wrap;
 }
 
 .MobileRow .MobileRow {
-  enabled: true;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 span:not([class]) {
-  enabled: true;
-  display: inline-block; /* Treat as a block-level element for better control */
-  width: auto; /* Adjust width based on content */
-  height: auto; /* Adjust height based on content */
-  min-width: 0; /* Minimize width */
-  min-height: 0; /* Minimize height */
-  padding: 0; /* Remove padding to reduce size */
-  margin: 0; /* Remove margin to reduce size */
-  line-height: 1; /* Minimize line-height to reduce vertical space */
-  font-size: inherit; /* Inherit font size to avoid unnecessary scaling */
-  overflow: hidden; /* Ensure content doesn't overflow */
-  white-space: nowrap; /* Prevent line breaks to minimize height */
-  text-overflow: ellipsis; /* Handle overflow text with ellipsis */
+  display: inline-block;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  font-size: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /*----------------------------------*/
@@ -239,191 +246,191 @@ span:not([class]) {
 
 /* --- SUBSCREENS ------------------*/
 .MobileSubScreen {
-  enabled: true;
   width: 100%;
-  height: auto; /* Allow element to expand based on content */
-  min-height: 0; /* Minimal height when empty */
-  overflow: hidden; /* Prevent scrolling */
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
 /* --- STEPLOOPS -------------------*/
 .MobileStepLoop {
-  enabled: true;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--base-margin);
   box-sizing: border-box;
 }
 
 /* --- FRAME -----------------------*/
 .MobileFrame {
-  enabled: true;
   width: 100%;
-  background-color: #ffffff;
-  padding: 10px;
-  margin-bottom: 10px;
+  background-color: var(--surface-color);
+  padding: var(--base-padding);
+  margin-bottom: var(--base-margin);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
-  height: auto; /* Allow element to expand based on content */
-  min-height: 0; /* Minimal height when empty */
+  height: auto;
+  min-height: 0;
 }
 
 .MobileFrameHeader {
-  enabled: true;
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--surface-color);
   font-weight: bold;
-  padding: 5px 0;
-  margin-bottom: 10px;
+  padding: 0.5rem 0;
+  margin-bottom: var(--base-margin);
 }
 
 /* --- BUTTONS ---------------------*/
 .MobileButton, .MobileButtonDisabled {
-  enabled: true;
   width: 100%;
-  padding: 15px;
-  background-color: #5a6268;
-  background: linear-gradient(135deg, #adb5bd, #5a6268);
+  padding: 0.75rem;
+  background-color: var(--primary-color);
   color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   text-align: center;
   font-size: 1rem;
   transition: background-color 0.3s, transform 0.2s;
   box-sizing: border-box;
+  box-shadow: var(--box-shadow);
 }
 
 .MobileButtonDisabled {
-  enabled: true;
-  background-color: #d6d8db;
-  background: linear-gradient(135deg, #e9ecef, #d6d8db);
+  background-color: var(--disabled-bg-color);
+  color: var(--disabled-text-color);
   cursor: not-allowed;
 }
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
-  enabled: true;
-  background-color: #495057;
-  background: linear-gradient(135deg, #868e96, #495057);
+  background-color: darken(var(--primary-color), 10%);
   transform: scale(1.03);
 }
 
 /* --- EDIT FIELDS ------------------*/
-.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, .MobileEditMultilineHighlighted {
-  enabled: true;
+.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, 
+.MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, 
+.MobileEditMultilineHighlighted {
   width: 100%;
-  padding: 10px;
-  border: 2px solid #ced4da;
-  border-radius: 8px;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
   font-size: 1rem;
   resize: vertical;
+  background-color: #ffffff;
 }
 
-.MobileEdit:focus, .MobileEditMultiline:focus, .MobileEditMultilineRequired:focus, .MobileEditRequired:focus, .MobileEditHighlighted:focus, .MobileEditRequiredHighlighted:focus, .MobileEditMultilineHighlighted:focus {
-  enabled: true;
-  border-color: #495057;
+.MobileEdit:focus, .MobileEditMultiline:focus, .MobileEditMultilineRequired:focus, 
+.MobileEditRequired:focus, .MobileEditHighlighted:focus, 
+.MobileEditRequiredHighlighted:focus, .MobileEditMultilineHighlighted:focus {
+  border-color: var(--primary-color);
+  outline: none;
 }
 
-.MobileEditDisabled, .MobileEditMultilineDisabled, .MobileEditRequiredDisabled, .MobileEditHighlightedDisabled, .MobileEditRequiredHighlightedDisabled, .MobileEditMultilineHighlightedDisabled {
-  enabled: true;
-  background-color: #f1f3f5;
-  color: #868e96;
+.MobileEditDisabled, .MobileEditMultilineDisabled, .MobileEditRequiredDisabled, 
+.MobileEditHighlightedDisabled, .MobileEditRequiredHighlightedDisabled, 
+.MobileEditMultilineHighlightedDisabled {
+  background-color: var(--disabled-bg-color);
+  color: var(--disabled-text-color);
   pointer-events: none;
-  border: 1px solid #808080;
-  width: auto; /* Allow width to adjust based on content */
-  height: auto; /* Allow height to adjust based on content */
-  min-height: 0; /* Ensure minimum height is zero */
-  padding: 10px; /* Adjust padding to your preference */
-  box-sizing: border-box; /* Include padding and border in the element's width and height */
-  overflow: visible; /* Ensure content is not clipped */
-  white-space: normal; /* Allow text to wrap within the element */
+  border: 1px solid var(--border-color);
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
 }
 
 /* --- F4 BUTTON -------------------*/
 .MobileF4Button, .MobileF4ButtonDisabled {
-  enabled: true;
   width: auto;
-  margin-top: 5px;
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  background-color: #5a6268;
-  background: linear-gradient(135deg, #adb5bd, #5a6268);
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: var(--small-font-size);
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
   color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.MobileF4ButtonDisabled {
+  background-color: var(--disabled-bg-color);
+  color: var(--disabled-text-color);
+  cursor: not-allowed;
+}
+
+.MobileF4Button:hover:not(.MobileF4ButtonDisabled) {
+  background-color: darken(var(--secondary-color), 10%);
 }
 
 /* --- LABEL FIELD -----------------*/
 .MobileLabel, .MobileLabelHighlighted, .MobileRadioLabel, .MobileCheckLabel {
-  enabled: true;
   display: block;
   width: 100%;
-  margin-bottom: 5px;
-  text-align: center; /* Center the text */
-  font-weight: bold; /* Bold the text */
-  font-family: "Courier New", Courier, monospace; /* Set to a technical font */
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: auto; /* Allow label to expand based on content */
-  min-height: 0; /* Minimal height when empty */
+  height: auto;
+  min-height: 0;
 }
 
 .MobileLabelHighlighted {
-  enabled: true;
-  color: blue;
+  color: var(--primary-color);
 }
 
 /* --- RADIOBOX --------------------*/
 .MobileRadioButton {
-  enabled: true;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 0.5rem;
 }
 
 /* --- LISTBOX ---------------------*/
 .MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
-  enabled: true;
   width: 100%;
-  border: 2px solid #ced4da;
-  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
-  padding: 10px;
+  padding: 0.75rem;
   background-color: #ffffff;
-  height: auto; /* Allow element to expand based on content */
-  min-height: 0; /* Minimal height when empty */
+  height: auto;
+  min-height: 0;
 }
 
 .MobileListboxRequiredDisabled, .MobileListboxRequiredHighlightedDisabled, .MobileListboxHighlightedDisabled, .MobileListboxDisabled {
-  enabled: true;
   width: 100%;
-  border-color: #ced4da;
-  color: #868e96;
-  background-color: #f1f3f5;
+  border-color: var(--border-color);
+  color: var(--disabled-text-color);
+  background-color: var(--disabled-bg-color);
 }
 
 /* --- SYSTEM MESSAGE / MAIL -------*/
 .MobileSysList {
-  enabled: true;
   width: 100%;
-  background-color: #ffffff;
-  padding: 15px;
-  margin-bottom: 10px;
-  border: 2px solid #b3c3cf;
-  border-radius: 8px;
+  background-color: var(--surface-color);
+  padding: var(--base-padding);
+  margin-bottom: var(--base-margin);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
   box-sizing: border-box;
-  overflow-y: hidden; /* Prevent scrolling */
-  height: auto; /* Allow element to expand based on content */
-  min-height: 0; /* Minimal height when empty */
+  overflow-y: hidden;
+  height: auto;
+  min-height: 0;
 }
 
 .MobileSysListTitle {
-  enabled: true;
   width: 100%;
-  background-color: #a3c1e4;
+  background-color: var(--secondary-color);
   font-weight: bold;
-  padding: 10px;
-  border-radius: 8px 8px 0 0;
+  padding: var(--base-padding);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   text-align: center;
+  color: #ffffff;
   box-sizing: border-box;
 }
