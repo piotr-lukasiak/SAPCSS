@@ -22,13 +22,13 @@
   /* Font Sizes */
   --base-font-size: 16px;
   --heading-font-size: clamp(1.5rem, 2vw, 2rem);
-  --label-font-size: clamp(1rem, 1.5vw, 1.25rem);
+  --label-font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   --button-font-size: clamp(1rem, 1.5vw, 1.25rem);
   --small-font-size: 0.875rem;
 
   /* Spacing */
-  --base-padding: 1rem;
-  --base-margin: 1rem;
+  --base-padding: 0.5rem; /* Reduced padding */
+  --base-margin: 0.5rem;  /* Reduced margin */
 
   /* Border Radius */
   --border-radius: 12px;
@@ -209,7 +209,7 @@ input, textarea, select {
 .MobileWindowTitle {
   font-weight: bold;
   font-size: var(--heading-font-size);
-  padding: 1rem 0;
+  padding: 0.5rem 0; /* Reduced padding */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -239,29 +239,24 @@ input, textarea, select {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center; /* Center the elements */
   box-sizing: border-box;
   flex-shrink: 1;
 }
 
+/* Adjust labels and inputs to scale */
 .MobileRow .MobileLabel, .MobileRow .MobileLabelHighlighted, .MobileRow .MobileRadioLabel, .MobileRow .MobileCheckLabel {
-  width: 35%;
-  min-width: 100px;
-  margin-right: var(--base-margin);
+  flex: 0 0 auto; /* Allow labels to shrink and grow */
+  margin-right: 0.5rem; /* Reduced margin */
   text-align: right;
   box-sizing: border-box;
-  font-size: var(--label-font-size); /* Increased label font size */
+  font-size: var(--label-font-size);
   color: var(--text-color);
 }
 
 .MobileRow .MobileEdit, .MobileRow .MobileEditMultiline, .MobileRow .MobileListbox, .MobileRow .MobileEditDisabled, .MobileRow .MobileEditMultilineDisabled, .MobileRow .MobileListboxDisabled {
-  width: 65%;
+  flex: 1 1 auto; /* Allow inputs to shrink and grow */
   box-sizing: border-box;
-  flex-shrink: 1;
-}
-
-/* Ensure elements shrink if necessary */
-.MobileRow .MobileLabel, .MobileRow .MobileEdit, .MobileRow .MobileListbox {
-  flex-shrink: 1;
 }
 
 span:not([class]) {
@@ -319,7 +314,7 @@ span:not([class]) {
   width: 100%;
   background-color: var(--surface-color);
   font-weight: bold;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0; /* Reduced padding */
   margin-bottom: var(--base-margin);
   font-size: var(--heading-font-size);
 }
@@ -327,14 +322,14 @@ span:not([class]) {
 /* --- BUTTONS ---------------------*/
 .MobileButton, .MobileButtonDisabled {
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem; /* Reduced padding */
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #FFFFFF;
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
   text-align: center;
-  font-size: var(--button-font-size); /* Increased font size for buttons */
+  font-size: var(--button-font-size);
   transition: background-color 0.3s, transform 0.2s;
   box-sizing: border-box;
   box-shadow: var(--box-shadow);
@@ -349,8 +344,8 @@ span:not([class]) {
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
   background: linear-gradient(135deg, #0B3D91, #009624);
-  transform: translateY(-3px); /* Slight lift effect */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* --- EDIT FIELDS ------------------*/
@@ -358,8 +353,8 @@ span:not([class]) {
 .MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, 
 .MobileEditMultilineHighlighted {
   width: 100%;
-  padding: 0.75rem;
-  border: 2px solid var(--border-color);
+  padding: 0.5rem; /* Reduced padding */
+  border: 1px solid var(--border-color); /* Reduced border size */
   border-radius: var(--border-radius);
   box-sizing: border-box;
   font-size: 1rem;
@@ -373,7 +368,7 @@ span:not([class]) {
 .MobileEditRequiredHighlighted:focus, .MobileEditMultilineHighlighted:focus {
   border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.3); /* Add focus ring */
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.3);
 }
 
 /* Disable selection of text in disabled inputs */
@@ -385,16 +380,16 @@ span:not([class]) {
   pointer-events: none;
   border: 1px solid var(--border-color);
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem;
   box-sizing: border-box;
-  user-select: none; /* Prevent text selection */
+  user-select: none;
 }
 
 /* --- F4 BUTTON -------------------*/
 .MobileF4Button, .MobileF4ButtonDisabled {
   width: auto;
   margin-top: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1rem; /* Reduced padding */
   font-size: var(--button-font-size);
   border-radius: var(--border-radius);
   background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
@@ -425,7 +420,7 @@ span:not([class]) {
   overflow: hidden;
   text-overflow: ellipsis;
   box-sizing: border-box;
-  font-size: var(--label-font-size); /* Increased label font size */
+  font-size: var(--label-font-size);
 }
 
 .MobileLabelHighlighted {
@@ -446,10 +441,10 @@ span:not([class]) {
 /* --- LISTBOX ---------------------*/
 .MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
   width: 100%;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color); /* Reduced border size */
   border-radius: var(--border-radius);
   box-sizing: border-box;
-  padding: 0.75rem;
+  padding: 0.5rem; /* Reduced padding */
   background-color: #FFFFFF;
   height: auto;
   min-height: 0;
@@ -469,7 +464,7 @@ span:not([class]) {
   background-color: var(--surface-color);
   padding: var(--base-padding);
   margin-bottom: var(--base-margin);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color); /* Reduced border size */
   border-radius: var(--border-radius);
   box-sizing: border-box;
   overflow-y: hidden;
@@ -502,6 +497,33 @@ body {
 img, video {
   max-width: 100%;
   height: auto;
+}
+
+/* Remove extra padding to save space */
+.MobileBody, .MobileUserArea, .MobileCuaArea {
+  padding: 0.5rem; /* Reduced padding */
+}
+
+/* Center elements in the MobileRow */
+.MobileRow {
+  justify-content: space-between; /* Adjusted to distribute space evenly */
+}
+
+/* Adjust label and input scaling */
+.MobileRow .MobileLabel,
+.MobileRow .MobileEdit,
+.MobileRow .MobileListbox {
+  flex: 1 1 auto;
+}
+
+/* Reduce font sizes slightly for better fit */
+.MobileLabel, .MobileLabelHighlighted, .MobileRadioLabel, .MobileCheckLabel {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+}
+
+/* Adjust margins to save space */
+.MobileRow, .MobileFrame, .MobileButton, .MobileEdit, .MobileListbox {
+  margin-bottom: 0.5rem;
 }
 
 /* Slick and Cool Enhancements */
