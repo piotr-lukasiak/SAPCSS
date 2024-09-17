@@ -6,9 +6,9 @@
 /* Root Variables for Theme Customization */
 :root {
   /* Color Palette */
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
+  --primary-color: #1e90ff; /* DodgerBlue */
+  --secondary-color: #32cd32; /* LimeGreen */
+  --accent-color: #ff4500; /* OrangeRed */
   --background-color: #f0f2f5;
   --surface-color: #ffffff;
   --border-color: #ced4da;
@@ -47,8 +47,7 @@ html, body {
   font-size: var(--base-font-size);
 }
 
-input, textarea {
-  width: 100%;
+input, textarea, select {
   font-family: inherit;
   font-size: 1rem;
   box-sizing: border-box;
@@ -216,13 +215,23 @@ input, textarea {
   width: 100%;
   margin-bottom: var(--base-margin);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.MobileRow .MobileRow {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.MobileRow .MobileLabel, .MobileRow .MobileLabelHighlighted, .MobileRow .MobileRadioLabel, .MobileRow .MobileCheckLabel {
+  width: 30%;
+  min-width: 100px;
+  margin-right: var(--base-margin);
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.MobileRow .MobileEdit, .MobileRow .MobileEditMultiline, .MobileRow .MobileListbox, .MobileRow .MobileEditDisabled, .MobileRow .MobileEditMultilineDisabled, .MobileRow .MobileListboxDisabled {
+  width: 70%;
+  box-sizing: border-box;
 }
 
 span:not([class]) {
@@ -306,7 +315,7 @@ span:not([class]) {
 }
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
-  background-color: darken(var(--primary-color), 10%);
+  background-color: #1c86ee; /* Slightly darker than DodgerBlue */
   transform: scale(1.03);
 }
 
@@ -364,13 +373,12 @@ span:not([class]) {
 }
 
 .MobileF4Button:hover:not(.MobileF4ButtonDisabled) {
-  background-color: darken(var(--secondary-color), 10%);
+  background-color: #2eb82e; /* Slightly darker than LimeGreen */
 }
 
 /* --- LABEL FIELD -----------------*/
 .MobileLabel, .MobileLabelHighlighted, .MobileRadioLabel, .MobileCheckLabel {
-  display: block;
-  width: 100%;
+  display: inline-block;
   margin-bottom: 0.5rem;
   text-align: left;
   font-weight: bold;
@@ -379,6 +387,7 @@ span:not([class]) {
   text-overflow: ellipsis;
   height: auto;
   min-height: 0;
+  box-sizing: border-box;
 }
 
 .MobileLabelHighlighted {
