@@ -27,8 +27,8 @@
   --small-font-size: 0.875rem;
 
   /* Spacing */
-  --base-padding: 1rem; /* Restored original padding */
-  --base-margin: 1rem;  /* Restored original margin */
+  --base-padding: 0.5rem; /* Reduced padding */
+  --base-margin: 0.5rem;  /* Reduced margin */
 
   /* Border Radius */
   --border-radius: 12px;
@@ -46,7 +46,7 @@ html, body {
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto; /* Enable scrolling */
   display: flex;
   flex-direction: column;
   font-size: var(--base-font-size);
@@ -67,10 +67,10 @@ input, textarea, select {
 .MobileBody {
   flex: 1;
   width: 100%;
-  padding: var(--base-padding);
+  padding: 0; /* Remove padding */
   background-color: var(--surface-color);
   box-sizing: border-box;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto; /* Enable scrolling */
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -82,10 +82,10 @@ input, textarea, select {
   flex-direction: column;
   flex: 1;
   width: 100%;
-  padding: 0;
+  padding: 0; /* Remove padding */
   box-sizing: border-box;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto; /* Enable scrolling */
 }
 
 /* Responsive Design for Orientation */
@@ -107,6 +107,8 @@ input, textarea, select {
   max-width: 100%;
   box-sizing: border-box;
   flex-shrink: 1;
+  padding: 0; /* Remove padding */
+  margin: 0;  /* Remove margin */
 }
 
 .MobileFrame, .MobileStepLoop {
@@ -114,17 +116,20 @@ input, textarea, select {
   flex-direction: column;
   width: 100%;
   flex-shrink: 1;
+  padding: 0; /* Remove padding */
+  margin: 0;  /* Remove margin */
 }
 
 /* Adjust Input Fields for Responsiveness */
-.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, 
-.MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, 
-.MobileEditMultilineHighlighted, .MobileListbox, .MobileListboxRequired, 
+.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired,
+.MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted,
+.MobileEditMultilineHighlighted, .MobileListbox, .MobileListboxRequired,
 .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: var(--base-margin);
   flex-shrink: 1;
+  padding: 0.25rem; /* Uniform padding */
 }
 
 /* Ensure Buttons Don't Overflow */
@@ -134,6 +139,7 @@ input, textarea, select {
   word-wrap: break-word;
   margin-bottom: var(--base-margin);
   flex-shrink: 0;
+  padding: 0.5rem; /* Uniform padding */
 }
 
 /* Adjust System Message for Better Fit */
@@ -141,6 +147,8 @@ input, textarea, select {
   width: 100%;
   box-sizing: border-box;
   flex-shrink: 0;
+  padding: 0; /* Remove padding */
+  margin: 0;  /* Remove margin */
 }
 
 /*----------------------------------*/
@@ -151,7 +159,7 @@ input, textarea, select {
 .MobileCuaArea {
   width: 100%;
   overflow: hidden;
-  padding: var(--base-padding);
+  padding: 0; /* Remove padding */
   box-sizing: border-box;
   flex-shrink: 0;
 }
@@ -160,8 +168,8 @@ input, textarea, select {
 .MobileUserArea {
   flex: 1;
   width: 100%;
-  overflow: hidden; /* Prevent scrolling */
-  padding: var(--base-padding);
+  overflow: auto; /* Enable scrolling */
+  padding: 0; /* Remove padding */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -189,7 +197,7 @@ input, textarea, select {
 .MobileMessageScreen {
   width: 100%;
   background-color: var(--surface-color);
-  padding: var(--base-padding);
+  padding: 0.25rem; /* Uniform padding */
   margin-bottom: var(--base-margin);
   border-bottom: 2px solid var(--accent-color);
   box-sizing: border-box;
@@ -197,19 +205,19 @@ input, textarea, select {
 }
 
 .MobileMessageLine {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem; /* Uniform margin */
 }
 
 .MobileMessageLogo {
   vertical-align: middle;
-  padding: 0 0.5rem;
+  padding: 0 0.25rem; /* Uniform padding */
 }
 
 /* --- TITLE -----------------------*/
 .MobileWindowTitle {
   font-weight: bold;
   font-size: var(--heading-font-size);
-  padding: 1rem 0; /* Restored original padding */
+  padding: 0.5rem 0; /* Reduced padding */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -222,13 +230,14 @@ input, textarea, select {
   background-color: var(--surface-color);
   vertical-align: middle;
   height: 1rem;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem; /* Uniform margin */
 }
 
 /* --- Include Frame ---------------*/
 .MobileIncludeFrame {
   width: 100%;
   margin-bottom: var(--base-margin);
+  padding: 0; /* Remove padding */
 }
 
 /* --- Basic Row -------------------*/
@@ -239,15 +248,15 @@ input, textarea, select {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: flex-start; /* Align items to the start */
+  justify-content: flex-start;
   box-sizing: border-box;
   flex-shrink: 1;
 }
 
 /* Adjust labels and inputs */
 .MobileRow .MobileLabel, .MobileRow .MobileLabelHighlighted, .MobileRow .MobileRadioLabel, .MobileRow .MobileCheckLabel {
-  flex: 0 0 auto; /* Allow labels to maintain size */
-  margin-right: 0.5rem;
+  flex: 0 0 auto;
+  margin-right: 0.25rem; /* Uniform margin */
   text-align: right;
   box-sizing: border-box;
   font-size: var(--label-font-size);
@@ -255,14 +264,15 @@ input, textarea, select {
 }
 
 .MobileRow .MobileEdit, .MobileRow .MobileEditMultiline, .MobileRow .MobileListbox {
-  flex: 1 1 auto; /* Allow inputs to grow and shrink */
+  flex: 1 1 auto;
   box-sizing: border-box;
 }
 
+/* Adjust MobileEditDisabled */
 .MobileRow .MobileEditDisabled, .MobileRow .MobileEditMultilineDisabled {
-  flex: 0 0 auto; /* Inputs size according to content */
-  width: auto; /* Width adjusts to content */
-  height: auto; /* Height adjusts to content */
+  flex: 0 1 auto;
+  width: auto;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -298,7 +308,7 @@ span:not([class]) {
   width: 100%;
   height: auto;
   min-height: 0;
-  overflow: hidden;
+  overflow: auto; /* Enable scrolling */
   box-sizing: border-box;
   flex-shrink: 1;
 }
@@ -311,13 +321,14 @@ span:not([class]) {
   gap: var(--base-margin);
   box-sizing: border-box;
   flex-shrink: 1;
+  padding: 0; /* Remove padding */
 }
 
 /* --- FRAME -----------------------*/
 .MobileFrame {
   width: 100%;
   background-color: var(--surface-color);
-  padding: var(--base-padding);
+  padding: 0.5rem; /* Uniform padding */
   margin-bottom: var(--base-margin);
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
@@ -325,19 +336,10 @@ span:not([class]) {
   flex-shrink: 1;
 }
 
-.MobileFrameHeader {
-  width: 100%;
-  background-color: var(--surface-color);
-  font-weight: bold;
-  padding: 0.5rem 0;
-  margin-bottom: var(--base-margin);
-  font-size: var(--heading-font-size);
-}
-
 /* --- BUTTONS ---------------------*/
 .MobileButton, .MobileButtonDisabled {
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem; /* Uniform padding */
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #FFFFFF;
   border: none;
@@ -350,26 +352,13 @@ span:not([class]) {
   box-shadow: var(--box-shadow);
 }
 
-.MobileButtonDisabled {
-  background-color: var(--disabled-bg-color);
-  color: var(--disabled-text-color);
-  cursor: not-allowed;
-  background-image: none;
-}
-
-.MobileButton:hover:not(.MobileButtonDisabled) {
-  background: linear-gradient(135deg, #0B3D91, #009624);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
 /* --- EDIT FIELDS ------------------*/
-.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired, 
-.MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted, 
+.MobileEdit, .MobileEditMultiline, .MobileEditMultilineRequired,
+.MobileEditRequired, .MobileEditHighlighted, .MobileEditRequiredHighlighted,
 .MobileEditMultilineHighlighted {
   width: 100%;
-  padding: 0.75rem;
-  border: 2px solid var(--border-color);
+  padding: 0.25rem; /* Uniform padding */
+  border: 1px solid var(--border-color); /* Uniform border */
   border-radius: var(--border-radius);
   box-sizing: border-box;
   font-size: 1rem;
@@ -378,17 +367,17 @@ span:not([class]) {
   flex-shrink: 1;
 }
 
-.MobileEdit:focus, .MobileEditMultiline:focus, .MobileEditMultilineRequired:focus, 
-.MobileEditRequired:focus, .MobileEditHighlighted:focus, 
+.MobileEdit:focus, .MobileEditMultiline:focus, .MobileEditMultilineRequired:focus,
+.MobileEditRequired:focus, .MobileEditHighlighted:focus,
 .MobileEditRequiredHighlighted:focus, .MobileEditMultilineHighlighted:focus {
   border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.3);
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.3);
 }
 
 /* Adjusting MobileEditDisabled */
-.MobileEditDisabled, .MobileEditMultilineDisabled, .MobileEditRequiredDisabled, 
-.MobileEditHighlightedDisabled, .MobileEditRequiredHighlightedDisabled, 
+.MobileEditDisabled, .MobileEditMultilineDisabled, .MobileEditRequiredDisabled,
+.MobileEditHighlightedDisabled, .MobileEditRequiredHighlightedDisabled,
 .MobileEditMultilineHighlightedDisabled {
   background-color: var(--disabled-bg-color);
   color: var(--disabled-text-color);
@@ -396,10 +385,10 @@ span:not([class]) {
   border: 1px solid var(--border-color);
   width: auto; /* Width adjusts to content */
   height: auto; /* Height adjusts to content */
-  padding: 0.5rem; /* Reduced padding */
+  padding: 0.25rem; /* Uniform padding */
   margin: 0; /* Remove margin to save space */
   box-sizing: border-box;
-  display: inline-block; /* Allow content-based sizing */
+  display: inline-block;
   vertical-align: middle;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -411,7 +400,7 @@ span:not([class]) {
 .MobileF4Button, .MobileF4ButtonDisabled {
   width: auto;
   margin-top: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1rem; /* Uniform padding */
   font-size: var(--button-font-size);
   border-radius: var(--border-radius);
   background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
@@ -421,21 +410,10 @@ span:not([class]) {
   transition: background-color 0.3s;
 }
 
-.MobileF4ButtonDisabled {
-  background-color: var(--disabled-bg-color);
-  color: var(--disabled-text-color);
-  cursor: not-allowed;
-  background-image: none;
-}
-
-.MobileF4Button:hover:not(.MobileF4ButtonDisabled) {
-  background: linear-gradient(135deg, #009624, #0B3D91);
-}
-
 /* --- LABEL FIELD -----------------*/
 .MobileLabel, .MobileLabelHighlighted, .MobileRadioLabel, .MobileCheckLabel {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem; /* Uniform margin */
   text-align: left;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
@@ -447,61 +425,6 @@ span:not([class]) {
 
 .MobileLabelHighlighted {
   color: var(--primary-color);
-}
-
-.MobileRadioLabel, .MobileCheckLabel {
-  margin-right: var(--base-margin);
-  font-size: 1rem;
-}
-
-/* --- RADIOBOX --------------------*/
-.MobileRadioButton {
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-
-/* --- LISTBOX ---------------------*/
-.MobileListbox, .MobileListboxRequired, .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
-  width: 100%;
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-sizing: border-box;
-  padding: 0.75rem;
-  background-color: #FFFFFF;
-  height: auto;
-  min-height: 0;
-  flex-shrink: 1;
-}
-
-.MobileListboxRequiredDisabled, .MobileListboxRequiredHighlightedDisabled, .MobileListboxHighlightedDisabled, .MobileListboxDisabled {
-  width: 100%;
-  border-color: var(--border-color);
-  color: var(--disabled-text-color);
-  background-color: var(--disabled-bg-color);
-}
-
-/* --- SYSTEM MESSAGE / MAIL -------*/
-.MobileSysList {
-  width: 100%;
-  background-color: var(--surface-color);
-  padding: var(--base-padding);
-  margin-bottom: var(--base-margin);
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-sizing: border-box;
-  overflow-y: hidden;
-  flex-shrink: 1;
-}
-
-.MobileSysListTitle {
-  width: 100%;
-  background-color: var(--secondary-color);
-  font-weight: bold;
-  padding: var(--base-padding);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-  text-align: center;
-  color: #FFFFFF;
-  box-sizing: border-box;
 }
 
 /* Additional styling to prevent elements from causing overflow */
@@ -519,37 +442,4 @@ body {
 img, video {
   max-width: 100%;
   height: auto;
-}
-
-/* Slick and Cool Enhancements */
-.MobileButton, .MobileF4Button {
-  position: relative;
-  overflow: hidden;
-}
-
-.MobileButton::after, .MobileF4Button::after {
-  content: '';
-  position: absolute;
-  left: -75px;
-  top: -75px;
-  width: 150px;
-  height: 150px;
-  background: rgba(255, 255, 255, 0.15);
-  transform: rotate(45deg);
-  animation: shine 3s infinite;
-}
-
-@keyframes shine {
-  0% {
-    left: -75px;
-    top: -75px;
-  }
-  50% {
-    left: 100%;
-    top: 100%;
-  }
-  100% {
-    left: 100%;
-    top: 100%;
-  }
 }
