@@ -3,22 +3,27 @@
 /*----------------------------------*/
 @import url("../ALV_GRID.CSS");
 
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 /* Root Variables for Theme Customization */
 :root {
   /* Color Palette */
-  --primary-color: #1e90ff; /* DodgerBlue */
-  --secondary-color: #32cd32; /* LimeGreen */
-  --accent-color: #ff4500; /* OrangeRed */
-  --background-color: #f0f2f5;
-  --surface-color: #ffffff;
-  --border-color: #ced4da;
-  --text-color: #333333;
-  --disabled-text-color: #868e96;
-  --disabled-bg-color: #f1f3f5;
+  --primary-color: #0D47A1;   /* Darker Blue */
+  --secondary-color: #00C853; /* Vibrant Green */
+  --accent-color: #FF5722;    /* Deep Orange */
+  --background-color: #ECEFF1;
+  --surface-color: #FFFFFF;
+  --border-color: #B0BEC5;
+  --text-color: #212121;
+  --disabled-text-color: #757575;
+  --disabled-bg-color: #CFD8DC;
 
   /* Font Sizes */
   --base-font-size: 16px;
-  --heading-font-size: 1.5rem;
+  --heading-font-size: clamp(1.5rem, 2vw, 2rem);
+  --label-font-size: clamp(1rem, 1.5vw, 1.25rem);
+  --button-font-size: clamp(1rem, 1.5vw, 1.25rem);
   --small-font-size: 0.875rem;
 
   /* Spacing */
@@ -26,25 +31,30 @@
   --base-margin: 1rem;
 
   /* Border Radius */
-  --border-radius: 8px;
+  --border-radius: 12px;
 
   /* Shadows */
-  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset and General Styles */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-  overflow: hidden;
+  overflow: hidden; /* Prevent scrolling */
   display: flex;
   flex-direction: column;
   font-size: var(--base-font-size);
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 input, textarea, select {
@@ -60,7 +70,10 @@ input, textarea, select {
   padding: var(--base-padding);
   background-color: var(--surface-color);
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* --- MOBILE SCREEN ---------------*/
@@ -69,10 +82,10 @@ input, textarea, select {
   flex-direction: column;
   flex: 1;
   width: 100%;
-  padding: var(--base-padding);
+  padding: 0;
   box-sizing: border-box;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* Responsive Design for Orientation */
@@ -93,12 +106,14 @@ input, textarea, select {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  flex-shrink: 1;
 }
 
 .MobileFrame, .MobileStepLoop {
   display: flex;
   flex-direction: column;
   width: 100%;
+  flex-shrink: 1;
 }
 
 /* Adjust Input Fields for Responsiveness */
@@ -107,25 +122,25 @@ input, textarea, select {
 .MobileEditMultilineHighlighted, .MobileListbox, .MobileListboxRequired, 
 .MobileListboxRequiredHighlighted, .MobileListboxHighlighted {
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
   margin-bottom: var(--base-margin);
+  flex-shrink: 1;
 }
 
 /* Ensure Buttons Don't Overflow */
 .MobileButton, .MobileButtonDisabled, .MobileF4Button, .MobileF4ButtonDisabled {
   width: 100%;
-  max-width: 100%;
   white-space: normal;
   word-wrap: break-word;
   margin-bottom: var(--base-margin);
+  flex-shrink: 0;
 }
 
 /* Adjust System Message for Better Fit */
 .MobileSysList, .MobileSysListTitle {
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 /*----------------------------------*/
@@ -138,17 +153,20 @@ input, textarea, select {
   overflow: hidden;
   padding: var(--base-padding);
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 /* --- USER AREA -------------------*/
 .MobileUserArea {
   flex: 1;
   width: 100%;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
   padding: var(--base-padding);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 1;
 }
 
 @media (orientation: landscape) {
@@ -175,6 +193,7 @@ input, textarea, select {
   margin-bottom: var(--base-margin);
   border-bottom: 2px solid var(--accent-color);
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .MobileMessageLine {
@@ -194,6 +213,8 @@ input, textarea, select {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 /* --- LOGO in Header --------------*/
@@ -219,19 +240,28 @@ input, textarea, select {
   flex-wrap: nowrap;
   align-items: center;
   box-sizing: border-box;
+  flex-shrink: 1;
 }
 
 .MobileRow .MobileLabel, .MobileRow .MobileLabelHighlighted, .MobileRow .MobileRadioLabel, .MobileRow .MobileCheckLabel {
-  width: 30%;
+  width: 35%;
   min-width: 100px;
   margin-right: var(--base-margin);
   text-align: right;
   box-sizing: border-box;
+  font-size: var(--label-font-size); /* Increased label font size */
+  color: var(--text-color);
 }
 
 .MobileRow .MobileEdit, .MobileRow .MobileEditMultiline, .MobileRow .MobileListbox, .MobileRow .MobileEditDisabled, .MobileRow .MobileEditMultilineDisabled, .MobileRow .MobileListboxDisabled {
-  width: 70%;
+  width: 65%;
   box-sizing: border-box;
+  flex-shrink: 1;
+}
+
+/* Ensure elements shrink if necessary */
+.MobileRow .MobileLabel, .MobileRow .MobileEdit, .MobileRow .MobileListbox {
+  flex-shrink: 1;
 }
 
 span:not([class]) {
@@ -260,6 +290,7 @@ span:not([class]) {
   min-height: 0;
   overflow: hidden;
   box-sizing: border-box;
+  flex-shrink: 1;
 }
 
 /* --- STEPLOOPS -------------------*/
@@ -269,6 +300,7 @@ span:not([class]) {
   flex-wrap: wrap;
   gap: var(--base-margin);
   box-sizing: border-box;
+  flex-shrink: 1;
 }
 
 /* --- FRAME -----------------------*/
@@ -280,8 +312,7 @@ span:not([class]) {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   box-sizing: border-box;
-  height: auto;
-  min-height: 0;
+  flex-shrink: 1;
 }
 
 .MobileFrameHeader {
@@ -290,19 +321,20 @@ span:not([class]) {
   font-weight: bold;
   padding: 0.5rem 0;
   margin-bottom: var(--base-margin);
+  font-size: var(--heading-font-size);
 }
 
 /* --- BUTTONS ---------------------*/
 .MobileButton, .MobileButtonDisabled {
   width: 100%;
-  padding: 0.75rem;
-  background-color: var(--primary-color);
-  color: #ffffff;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #FFFFFF;
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--button-font-size); /* Increased font size for buttons */
   transition: background-color 0.3s, transform 0.2s;
   box-sizing: border-box;
   box-shadow: var(--box-shadow);
@@ -312,11 +344,13 @@ span:not([class]) {
   background-color: var(--disabled-bg-color);
   color: var(--disabled-text-color);
   cursor: not-allowed;
+  background-image: none;
 }
 
 .MobileButton:hover:not(.MobileButtonDisabled) {
-  background-color: #1c86ee; /* Slightly darker than DodgerBlue */
-  transform: scale(1.03);
+  background: linear-gradient(135deg, #0B3D91, #009624);
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* --- EDIT FIELDS ------------------*/
@@ -330,7 +364,8 @@ span:not([class]) {
   box-sizing: border-box;
   font-size: 1rem;
   resize: vertical;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
+  flex-shrink: 1;
 }
 
 .MobileEdit:focus, .MobileEditMultiline:focus, .MobileEditMultilineRequired:focus, 
@@ -338,8 +373,10 @@ span:not([class]) {
 .MobileEditRequiredHighlighted:focus, .MobileEditMultilineHighlighted:focus {
   border-color: var(--primary-color);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.3); /* Add focus ring */
 }
 
+/* Disable selection of text in disabled inputs */
 .MobileEditDisabled, .MobileEditMultilineDisabled, .MobileEditRequiredDisabled, 
 .MobileEditHighlightedDisabled, .MobileEditRequiredHighlightedDisabled, 
 .MobileEditMultilineHighlightedDisabled {
@@ -350,17 +387,18 @@ span:not([class]) {
   width: 100%;
   padding: 0.75rem;
   box-sizing: border-box;
+  user-select: none; /* Prevent text selection */
 }
 
 /* --- F4 BUTTON -------------------*/
 .MobileF4Button, .MobileF4ButtonDisabled {
   width: auto;
   margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: var(--small-font-size);
+  padding: 0.75rem 1.25rem;
+  font-size: var(--button-font-size);
   border-radius: var(--border-radius);
-  background-color: var(--secondary-color);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: #FFFFFF;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -370,10 +408,11 @@ span:not([class]) {
   background-color: var(--disabled-bg-color);
   color: var(--disabled-text-color);
   cursor: not-allowed;
+  background-image: none;
 }
 
 .MobileF4Button:hover:not(.MobileF4ButtonDisabled) {
-  background-color: #2eb82e; /* Slightly darker than LimeGreen */
+  background: linear-gradient(135deg, #009624, #0B3D91);
 }
 
 /* --- LABEL FIELD -----------------*/
@@ -382,16 +421,20 @@ span:not([class]) {
   margin-bottom: 0.5rem;
   text-align: left;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: auto;
-  min-height: 0;
   box-sizing: border-box;
+  font-size: var(--label-font-size); /* Increased label font size */
 }
 
 .MobileLabelHighlighted {
   color: var(--primary-color);
+}
+
+.MobileRadioLabel, .MobileCheckLabel {
+  margin-right: var(--base-margin);
+  font-size: 1rem;
 }
 
 /* --- RADIOBOX --------------------*/
@@ -407,9 +450,10 @@ span:not([class]) {
   border-radius: var(--border-radius);
   box-sizing: border-box;
   padding: 0.75rem;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   height: auto;
   min-height: 0;
+  flex-shrink: 1;
 }
 
 .MobileListboxRequiredDisabled, .MobileListboxRequiredHighlightedDisabled, .MobileListboxHighlightedDisabled, .MobileListboxDisabled {
@@ -429,8 +473,7 @@ span:not([class]) {
   border-radius: var(--border-radius);
   box-sizing: border-box;
   overflow-y: hidden;
-  height: auto;
-  min-height: 0;
+  flex-shrink: 1;
 }
 
 .MobileSysListTitle {
@@ -440,6 +483,56 @@ span:not([class]) {
   padding: var(--base-padding);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   box-sizing: border-box;
+}
+
+/* Additional styling to prevent elements from causing overflow */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive font sizes */
+body {
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* Ensure images and videos scale down */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Slick and Cool Enhancements */
+.MobileButton, .MobileF4Button {
+  position: relative;
+  overflow: hidden;
+}
+
+.MobileButton::after, .MobileF4Button::after {
+  content: '';
+  position: absolute;
+  left: -75px;
+  top: -75px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -75px;
+    top: -75px;
+  }
+  50% {
+    left: 100%;
+    top: 100%;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
 }
