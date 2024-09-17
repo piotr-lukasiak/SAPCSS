@@ -387,6 +387,7 @@ span:not([class]) {
   height: auto; /* Height adjusts to content */
   padding: 0.25rem; /* Uniform padding */
   margin: 0; /* Remove margin to save space */
+  size: 0;
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
