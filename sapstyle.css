@@ -444,3 +444,127 @@ img, video {
   max-width: 100%;
   height: auto;
 }
+
+/*----------------------------------*/
+/* LOGIN SCREEN ELEMENTS            */
+/*----------------------------------*/
+
+/* --- LOGIN BODY -------------------*/
+.MobileLoginBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: var(--base-padding);
+  box-sizing: border-box;
+}
+
+/* --- LOGIN FORM -------------------*/
+.MobileLoginForm {
+  background-color: var(--surface-color);
+  padding: 2rem; /* Generous padding */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 400px; /* Limit the max width */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- LOGIN TITLE ------------------*/
+.MobileLoginTitle {
+  font-size: var(--heading-font-size);
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: var(--base-margin);
+  text-align: center;
+}
+
+/* --- BOLD TEXT --------------------*/
+.MobileLoginBldTxt {
+  font-weight: bold;
+  font-size: var(--label-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--base-margin);
+  text-align: center;
+}
+
+/* --- LOGIN CONTENT ----------------*/
+.MobileLoginContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* --- STANDARD CELL ----------------*/
+.MobileLoginStdCell {
+  width: 100%;
+  margin-bottom: var(--base-margin);
+  box-sizing: border-box;
+}
+
+/* --- STANDARD TEXT ----------------*/
+.MobileLoginStdTxt {
+  font-size: var(--label-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.25rem; /* Slight margin below text */
+}
+
+/* --- STANDARD EDIT (INPUT) --------*/
+.MobileLoginStdEdt {
+  width: 100%;
+  padding: 0.5rem; /* Uniform padding */
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+}
+
+.MobileLoginStdEdt:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.2);
+}
+
+/* --- STANDARD BUTTON --------------*/
+.MobileLoginStdBtn {
+  width: 100%;
+  padding: 0.75rem; /* Slightly larger padding for button */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--button-font-size);
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  box-sizing: border-box;
+  box-shadow: var(--box-shadow);
+  margin-top: var(--base-margin);
+}
+
+.MobileLoginStdBtn:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-2px);
+}
+
+.MobileLoginStdBtn:active {
+  transform: translateY(0);
+}
+
+/* --- TOP CELL (For logo or header) ---*/
+.MobileLoginTopCell {
+  width: 100%;
+  margin-bottom: var(--base-margin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
