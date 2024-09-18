@@ -449,6 +449,31 @@ img, video {
 /* LOGIN SCREEN ELEMENTS            */
 /*----------------------------------*/
 
+/* --- LOGIN BODY -------------------*/
+.MobileLoginBody {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* --- LOGIN FORM -------------------*/
+/* Target the form inside .MobileLoginBody */
+.MobileLoginBody form {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  box-sizing: border-box;
+}
+
 /* Reset default margins and paddings, ensure full height */
 html, body {
   margin: 0;
@@ -473,16 +498,7 @@ html, body {
   margin: 0;
 }
 
-/* Make the login screen fill the available width */
-.MobileLoginScreen {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-/* Adjust the login title */
+/* --- LOGIN TITLE ------------------*/
 .MobileLoginTitle {
   font-size: 2rem; /* Increase font size for visibility */
   font-weight: bold;
@@ -492,7 +508,7 @@ html, body {
   width: 100%;
 }
 
-/* Adjust the login content */
+/* --- LOGIN CONTENT ----------------*/
 .MobileLoginContent {
   width: 100%;
   margin: 0 auto;
