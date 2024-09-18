@@ -498,8 +498,7 @@ img, video {
   width: 100%;
   margin-bottom: var(--base-margin);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   align-items: stretch;
 }
 
