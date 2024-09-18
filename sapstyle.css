@@ -11,7 +11,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f2f2f2; /* Subtle light gray background */
     color: #333;
 }
 
@@ -48,17 +48,17 @@ form {
 .MobileEdit,
 .MobileEditDisabled {
     flex: 1 1 100%;
-    padding: 12px 15px;
+    padding: 8px 12px; /* Reduced padding to decrease height */
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 6px;
     box-sizing: border-box;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .MobileEdit:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    border-color: #17a2b8;
+    box-shadow: 0 0 6px rgba(23, 162, 184, 0.2);
     outline: none;
 }
 
@@ -73,7 +73,7 @@ form {
     font-size: 18px;
     font-weight: 500;
     color: #fff;
-    background-color: #28a745;
+    background-color: #17a2b8;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -84,7 +84,7 @@ form {
 }
 
 .MobileButton:hover {
-    background-color: #218838;
+    background-color: #138496;
 }
 
 .MobileButton:active {
@@ -92,10 +92,10 @@ form {
 }
 
 .MobileSubScreen {
-    background-color: #fff;
-    padding: 25px;
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Removed shadow for a flatter look */
 }
 
 .input-group {
@@ -133,23 +133,29 @@ form {
 }
 
 .small-input {
-    flex: 0 1 80px;
-    max-width: 80px;
+    flex: 0 1 60px;
+    max-width: 60px;
+}
+
+/* Adjustments for spans without a class */
+span:not([class]) {
+    height: 1px;
+    display: block; /* Ensure height is applied */
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
     .MobileUserArea {
-        padding: 40px;
+        padding: 30px;
     }
 
     .MobileButton {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .MobileEdit,
     .MobileEditDisabled {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -157,7 +163,7 @@ form {
 @media (orientation: landscape) {
     .MobileUserArea {
         column-count: 2;
-        column-gap: 40px;
+        column-gap: 30px;
     }
 
     .MobileRow {
@@ -166,19 +172,13 @@ form {
         margin-bottom: 20px;
     }
 
-    .MobileLabel {
-        flex: unset;
-        margin-bottom: 5px;
-    }
-
     .MobileButton {
-        flex: unset;
         width: 100%;
         margin-right: 0;
     }
 }
 
-/* Adjustments for small elements */
+/* Adjustments for elements */
 .MobileLabel,
 .MobileEdit,
 .MobileEditDisabled,
@@ -186,30 +186,29 @@ form {
     width: 100%;
 }
 
-/* Make elements look cooler */
-.MobileEdit,
-.MobileEditDisabled {
-    background-color: #fff;
+/* Subtle background and reduced visual prominence */
+body {
+    background-color: #f2f2f2;
 }
 
-.MobileEdit:focus {
-    border-color: #17a2b8;
-    box-shadow: 0 0 8px rgba(23, 162, 184, 0.2);
-}
-
-.MobileButton {
-    background-color: #17a2b8;
-}
-
-.MobileButton:hover {
-    background-color: #138496;
-}
-
-/* Enhanced Visuals */
 .MobileSubScreen {
     background-color: #ffffff;
 }
 
-body {
-    background-color: #e9ecef;
+.MobileEdit,
+.MobileEditDisabled {
+    background-color: #ffffff;
+}
+
+.MobileButton {
+    background-color: #007bff; /* Subtle blue */
+}
+
+.MobileButton:hover {
+    background-color: #0056b3;
+}
+
+/* Remove excessive shadows */
+.MobileEdit:focus {
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
 }
