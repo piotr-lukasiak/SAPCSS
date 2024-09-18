@@ -449,29 +449,15 @@ img, video {
 /* LOGIN SCREEN ELEMENTS            */
 /*----------------------------------*/
 
-/* --- LOGIN SCREEN -------------------*/
+/* --- LOGIN SCREEN CONTAINER -------*/
 .MobileLoginScreen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Full viewport height */
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: var(--base-padding);
-  box-sizing: border-box;
-}
-
-/* --- LOGIN FORM -------------------*/
-.MobileLoginForm {
+  width: 90%;              /* Stretch to 90% of the screen width */
+  margin: 0 auto;          /* Center the login screen */
   background-color: var(--surface-color);
-  padding: 2rem; /* Generous padding */
+  padding: 2rem;           /* Generous padding */
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  width: 100%;
-  max-width: 500px; /* Increased max width */
   box-sizing: border-box;
-  display: inline-block;
-  align-items: center;
 }
 
 /* --- LOGIN TITLE ------------------*/
@@ -486,39 +472,49 @@ img, video {
 /* --- LOGIN CONTENT ----------------*/
 .MobileLoginContent {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   box-sizing: border-box;
 }
 
-/* --- STANDARD CELL ----------------*/
-.MobileLoginStdCell {
+/* Adjust the table inside MobileLoginContent */
+.MobileLoginContent table {
   width: 100%;
-  margin-bottom: var(--base-margin);
-  box-sizing: border-box;
-  display: inline-block;
-  align-items: stretch;
+  border-collapse: collapse; /* Remove gaps between cells */
 }
 
-/* --- STANDARD TEXT ----------------*/
+/* Adjust the table cells */
+.MobileLoginContent td.MobileLoginStdCell {
+  padding: var(--base-padding);
+  vertical-align: middle;
+}
+
+/* First cell (labels) */
+.MobileLoginContent td.MobileLoginStdCell:first-child {
+  width: 30%;               /* Set width for label cells */
+  text-align: right;        /* Right-align labels */
+  white-space: nowrap;      /* Prevent labels from wrapping */
+}
+
+/* Second cell (inputs) */
+.MobileLoginContent td.MobileLoginStdCell:last-child {
+  width: 70%;               /* Set width for input cells */
+}
+
+/* --- STANDARD TEXT (Labels) ----------------*/
 .MobileLoginStdTxt {
   font-size: var(--label-font-size);
   color: var(--text-color);
-  margin-bottom: 0.25rem; /* Slight margin below text */
+  white-space: nowrap;      /* Prevent labels from wrapping */
 }
 
-/* --- STANDARD EDIT (INPUT) --------*/
+/* --- STANDARD EDIT (INPUT FIELDS) --------*/
 .MobileLoginStdEdt {
-  width: 100%;
-  min-width: 250px; /* Ensure a minimum width */
-  padding: 0.5rem; /* Uniform padding */
+  width: 100%;              /* Input fields fill their cell */
+  padding: 0.5rem;          /* Uniform padding */
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   box-sizing: border-box;
   font-size: 1rem;
   background-color: #FFFFFF;
-  flex-shrink: 0; /* Prevent the input from shrinking */
 }
 
 .MobileLoginStdEdt:focus {
@@ -530,7 +526,7 @@ img, video {
 /* --- STANDARD BUTTON --------------*/
 .MobileLoginStdBtn {
   width: 100%;
-  padding: 0.75rem; /* Slightly larger padding for button */
+  padding: 0.75rem;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: #FFFFFF;
   border: none;
@@ -554,11 +550,20 @@ img, video {
   transform: translateY(0);
 }
 
-/* --- TOP CELL (For logo or header) ---*/
+/* --- TOP CELL (For button alignment) ---*/
 .MobileLoginTopCell {
   width: 100%;
-  margin-bottom: var(--base-margin);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;        /* Center the content */
+  padding-top: var(--base-margin);
+}
+
+/* Adjust the link for "Change Password" */
+.MobileLoginTopCell a {
+  font-size: var(--small-font-size);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.MobileLoginTopCell a:hover {
+  text-decoration: underline;
 }
