@@ -449,161 +449,132 @@ img, video {
 /* LOGIN SCREEN ELEMENTS            */
 /*----------------------------------*/
 
-/* --- LOGIN BODY -------------------*/
-.MobileLoginBody {
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Ensure the body takes the full viewport height */
-  width: 100vw; /* Full viewport width */
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  display: flex;
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
-  box-sizing: border-box;
-}
-
-/* --- LOGIN FORM -------------------*/
-/* Target the form inside .MobileLoginBody */
-.MobileLoginBody form {
-  width: 90%; /* Allow the form to take up most of the width on smaller screens */
-  max-width: 400px; /* Restrict the maximum width */
-  background-color: var(--surface-color);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  box-sizing: border-box;
-}
-
-/* Reset default margins and paddings, ensure full height */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* --- LOGIN TITLE ------------------*/
-.MobileLoginTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin-bottom: 1.5rem; /* Increase bottom margin for better spacing */
-  text-align: center;
-  width: 100%;
-}
-
-/* --- LOGIN CONTENT ----------------*/
-.MobileLoginContent {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Adjust the table inside MobileLoginContent */
-.MobileLoginContent table {
-  width: 100%;
-  border-collapse: collapse; /* Remove gaps between cells */
-  margin: 0;
-  padding: 0;
-}
-
-/* Adjust the table cells */
-.MobileLoginContent td.MobileLoginStdCell {
-  padding: 0.5rem;
-  box-sizing: border-box;
-}
-
-/* First cell (labels) */
-.MobileLoginContent td.MobileLoginStdCell:first-child {
-  width: 30%;               
-  text-align: right;        
-  white-space: nowrap;      
-  padding-right: 1rem;      
-}
-
-/* Second cell (inputs) */
-.MobileLoginContent td.MobileLoginStdCell:last-child {
-  width: 70%;               
-  text-align: left;
-}
-
-/* --- STANDARD TEXT (Labels) ----------------*/
-.MobileLoginStdTxt {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  white-space: nowrap;
-}
-
-/* --- STANDARD EDIT (INPUT FIELDS) --------*/
-.MobileLoginStdEdt {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-sizing: border-box;
-  font-size: 1.1rem;
-  background-color: #FFFFFF;
-}
-
-.MobileLoginStdEdt:focus {
-  border-color: var(--primary-color);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.3);
-}
-
-/* --- STANDARD BUTTON --------------*/
-.MobileLoginStdBtn {
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: #FFFFFF;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
-  box-sizing: border-box;
-  box-shadow: var(--box-shadow);
-  margin-top: 1rem;
-}
-
-.MobileLoginStdBtn:hover {
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-  transform: translateY(-2px);
-}
-
-.MobileLoginStdBtn:active {
-  transform: translateY(0);
-}
-
-/* --- TOP CELL (For button alignment) ---*/
-.MobileLoginTopCell {
-  width: 100%;
-  text-align: center;
-  padding-top: 1rem;
-}
-
-.MobileLoginTopCell a {
-  font-size: 1rem;
-  color: var(--primary-color);
+/* Link Styles */
+a:link, a:visited {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #007BFF; /* Company blue color */
   text-decoration: none;
 }
 
-.MobileLoginTopCell a:hover {
+a:hover {
+  color: #28A745; /* Company green color */
   text-decoration: underline;
 }
 
-/* Prevent elements from causing overflow */
-* {
-  max-width: 100%;
-  box-sizing: border-box;
+/* Body Styling */
+.MobileLoginBody {
+  background-color: #F0F4F8; /* Light background for a modern look */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ensure images and videos scale down */
-img, video {
-  max-width: 100%;
-  height: auto;
+/* Screen Styling */
+.MobileScreen {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login Screen Styling */
+.MobileLoginScreen {
+  background-color: #FFFFFF;
+  width: 320px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 8px; /* Rounded corners for modern flair */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title Styling */
+.MobileLoginTitle {
+  background-color: #007BFF; /* Company blue */
+  color: #FFFFFF;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Content Styling */
+.MobileLoginContent {
+  padding: 20px;
+}
+
+/* Text Styling */
+.MobileLoginStdTxt,
+.MobileLoginBldTxt {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.MobileLoginBldTxt {
+  font-weight: bold;
+}
+
+.MobileLoginRedTxt {
+  color: red;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.MobileLoginStdEdt {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #495057;
+  padding: 10px;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.MobileLoginStdEdt:focus {
+  border-color: #28A745; /* Company green */
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Buttons */
+.MobileLoginStdBtn {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #28A745; /* Company green */
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.MobileLoginStdBtn:hover {
+  background-color: #218838;
+}
+
+/* Cell Styling */
+.MobileLoginStdCell,
+.MobileLoginTopCell {
+  padding: 5px 0;
+}
+
+/* Link Styling in Content */
+.MobileLoginContent a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.MobileLoginContent a:hover {
+  text-decoration: underline;
 }
