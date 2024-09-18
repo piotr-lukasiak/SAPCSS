@@ -451,9 +451,16 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* Body Styling */
 .MobileLoginBody {
-  background-color: #F0F4F8; /* Light background for a modern look */
+  background-color: #F0F4F8; /* Light background */
   width: 100%;
   height: 100%;
   margin: 0;
@@ -463,12 +470,20 @@ a:hover {
 /* Screen Styling */
 .MobileScreen {
   width: 100%;
-  height: 100%;
+  height: 100%; /* Ensure the parent table takes full height */
   padding: 0;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: table; /* Necessary for vertical alignment */
+}
+
+/* Align the content vertically and horizontally */
+.MobileScreen > tbody > tr {
+  height: 100%;
+}
+
+.MobileScreen > tbody > tr > td {
+  vertical-align: middle; /* Vertically center the content */
+  text-align: center;     /* Horizontally center the content */
 }
 
 /* Login Screen Styling */
@@ -476,10 +491,11 @@ a:hover {
   background-color: #FFFFFF;
   width: 320px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto; /* Center horizontally */
   border: 0;
   border-radius: 8px; /* Rounded corners for modern flair */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: inline-block; /* Required for proper centering */
 }
 
 /* Title Styling */
@@ -557,6 +573,20 @@ a:hover {
 .MobileLoginStdCell,
 .MobileLoginTopCell {
   padding: 5px 0;
+}
+
+/* Link Styles */
+a:link,
+a:visited {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #007BFF; /* Company blue color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
 /* Link Styling in Content */
