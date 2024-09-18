@@ -34,50 +34,30 @@ form {
 /* Responsive Grid */
 .MobileRow {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row; /* Ensure elements stay in a row */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 15px;
 }
 
-/* Adjust .MobileRow height when containing only a classless span */
-.MobileRow:has(> span:not([class]):only-child) {
-    height: 1px;
-    margin-bottom: 0;
-}
-
-/* Fallback for browsers that don't support :has() */
-.MobileRow.empty-row {
-    height: 1px;
-    margin-bottom: 0;
-}
-
 .MobileLabel {
-    flex: 1 1 100%;
+    flex: 0 0 auto; /* Do not shrink or grow */
+    margin-right: 10px;
     font-weight: 500;
-    margin-bottom: 5px;
     color: #555;
 }
 
 .MobileEdit,
 .MobileEditDisabled {
+    flex: 1 1 auto; /* Allow to grow or shrink as needed */
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
     transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: #ffffff; /* Uniform background color */
-}
-
-/* Enabled edit fields */
-.MobileEdit {
-    flex: 1 1 50%; /* Restricted to 50% width */
-}
-
-/* Disabled edit fields */
-.MobileEditDisabled {
-    flex: 0 0 auto; /* Width adjusts to content */
-    width: auto;
-    display: inline-block; /* Allows width to adjust to content */
+    background-color: #ffffff;
 }
 
 .MobileEdit:focus {
@@ -91,7 +71,7 @@ form {
 }
 
 .MobileButton {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 500;
@@ -115,7 +95,7 @@ form {
 }
 
 .MobileSubScreen {
-    background-color: #ffffff; /* Uniform background color */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: none;
@@ -123,37 +103,25 @@ form {
 
 .input-group {
     display: flex;
-    flex-direction: column;
-    flex: 1 1 100%;
-}
-
-.input-group-inline {
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 10px; /* Space between elements */
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
-.input-group-inline .MobileLabel {
-    flex: 0 0 auto;
-    margin-bottom: 0;
+.input-group .MobileLabel {
+    margin-right: 10px;
 }
 
-.input-group-inline .MobileEdit,
-.input-group-inline .MobileEditDisabled {
-    margin-bottom: 0;
-}
-
-.input-group .MobileLabel + .MobileEdit,
-.input-group .MobileLabel + .MobileEditDisabled {
-    margin-top: 5px;
+.input-group .MobileEdit,
+.input-group .MobileEditDisabled {
+    flex: 1 1 auto;
 }
 
 /* Adjustments for small inputs */
 .small-input {
-    flex: 0 0 auto;
-    width: 50px;
+    flex: 0 0 60px;
+    max-width: 60px;
 }
 
 /* Adjustments for spans without a class */
@@ -162,47 +130,32 @@ span:not([class]) {
     display: block;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    .MobileUserArea {
-        padding: 30px;
-    }
-
-    .MobileButton {
-        font-size: 18px;
-    }
-
-    .MobileEdit,
-    .MobileEditDisabled {
-        font-size: 16px;
-    }
+/* Adjust .MobileRow height when containing only a classless span */
+.MobileRow.empty-row {
+    height: 1px;
+    margin-bottom: 0;
 }
 
-/* Landscape Mode Adjustments */
-@media (orientation: landscape) {
-    .MobileUserArea {
-        column-count: 2;
-        column-gap: 30px;
-    }
-
+/* Responsive Design */
+@media (max-width: 600px) {
     .MobileRow {
         flex-direction: column;
-        break-inside: avoid;
-        margin-bottom: 20px;
+        align-items: stretch;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .MobileLabel {
+        margin-bottom: 5px;
     }
 
     .MobileButton {
         width: 100%;
         margin-right: 0;
     }
-}
-
-/* Adjustments for elements */
-.MobileLabel,
-.MobileEdit,
-.MobileEditDisabled,
-.MobileButton {
-    width: 100%;
 }
 
 /* Cool Aesthetic Enhancements */
@@ -226,4 +179,11 @@ body {
 /* Remove excessive shadows */
 .MobileEdit:focus {
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+/* Prevent overlapping */
+.MobileEdit,
+.MobileEditDisabled,
+.MobileButton {
+    min-width: 0;
 }
