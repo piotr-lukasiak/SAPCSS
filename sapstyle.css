@@ -449,25 +449,13 @@ img, video {
 /* LOGIN SCREEN ELEMENTS            */
 /*----------------------------------*/
 
-/* --- LOGIN BODY -------------------*/
+/* --- LOGIN SCREEN -------------------*/
 .MobileLoginScreen {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh; /* Full viewport height */
-  width: 100%;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: var(--base-padding);
-  box-sizing: border-box;
-}
-
-.MobileLoginBody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   padding: var(--base-padding);
   box-sizing: border-box;
@@ -480,7 +468,7 @@ img, video {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   width: 100%;
-  max-width: 400px; /* Limit the max width */
+  max-width: 500px; /* Increased max width */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -496,15 +484,6 @@ img, video {
   text-align: center;
 }
 
-/* --- BOLD TEXT --------------------*/
-.MobileLoginBldTxt {
-  font-weight: bold;
-  font-size: var(--label-font-size);
-  color: var(--text-color);
-  margin-bottom: var(--base-margin);
-  text-align: center;
-}
-
 /* --- LOGIN CONTENT ----------------*/
 .MobileLoginContent {
   width: 100%;
@@ -516,9 +495,12 @@ img, video {
 
 /* --- STANDARD CELL ----------------*/
 .MobileLoginStdCell {
-  width: 50%;
+  width: 100%;
   margin-bottom: var(--base-margin);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* --- STANDARD TEXT ----------------*/
@@ -531,12 +513,14 @@ img, video {
 /* --- STANDARD EDIT (INPUT) --------*/
 .MobileLoginStdEdt {
   width: 100%;
+  min-width: 250px; /* Ensure a minimum width */
   padding: 0.5rem; /* Uniform padding */
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   box-sizing: border-box;
   font-size: 1rem;
   background-color: #FFFFFF;
+  flex-shrink: 0; /* Prevent the input from shrinking */
 }
 
 .MobileLoginStdEdt:focus {
