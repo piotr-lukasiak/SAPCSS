@@ -11,7 +11,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2; /* Subtle light gray background */
+    background-color: #f2f2f2; /* Uniform subtle light gray background */
     color: #333;
 }
 
@@ -38,6 +38,18 @@ form {
     margin-bottom: 15px;
 }
 
+/* Adjust .MobileRow height when containing only a classless span */
+.MobileRow:has(> span:not([class]):only-child) {
+    height: 1px;
+    margin-bottom: 0;
+}
+
+/* Fallback for browsers that don't support :has() */
+.MobileRow.empty-row {
+    height: 1px;
+    margin-bottom: 0;
+}
+
 .MobileLabel {
     flex: 1 1 100%;
     font-weight: 500;
@@ -47,23 +59,34 @@ form {
 
 .MobileEdit,
 .MobileEditDisabled {
-    flex: 1 1 100%;
-    padding: 8px 12px; /* Reduced padding to decrease height */
+    padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
     transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #ffffff; /* Uniform background color */
+}
+
+/* Enabled edit fields */
+.MobileEdit {
+    flex: 1 1 50%; /* Restricted to 50% width */
+}
+
+/* Disabled edit fields */
+.MobileEditDisabled {
+    flex: 0 0 auto; /* Width adjusts to content */
+    width: auto;
+    display: inline-block; /* Allows width to adjust to content */
 }
 
 .MobileEdit:focus {
-    border-color: #17a2b8;
-    box-shadow: 0 0 6px rgba(23, 162, 184, 0.2);
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
     outline: none;
 }
 
 .MobileEditDisabled {
-    background-color: #e9ecef;
     color: #6c757d;
 }
 
@@ -73,7 +96,7 @@ form {
     font-size: 18px;
     font-weight: 500;
     color: #fff;
-    background-color: #17a2b8;
+    background-color: #007bff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -84,7 +107,7 @@ form {
 }
 
 .MobileButton:hover {
-    background-color: #138496;
+    background-color: #0056b3;
 }
 
 .MobileButton:active {
@@ -92,10 +115,10 @@ form {
 }
 
 .MobileSubScreen {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Uniform background color */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: none; /* Removed shadow for a flatter look */
+    box-shadow: none;
 }
 
 .input-group {
@@ -109,16 +132,11 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-}
-
-.input-group-inline .MobileLabel,
-.input-group-inline .MobileEdit,
-.input-group-inline .MobileEditDisabled {
-    flex: 1;
-    margin-right: 10px;
+    gap: 10px; /* Space between elements */
 }
 
 .input-group-inline .MobileLabel {
+    flex: 0 0 auto;
     margin-bottom: 0;
 }
 
@@ -132,15 +150,16 @@ form {
     margin-top: 5px;
 }
 
+/* Adjustments for small inputs */
 .small-input {
-    flex: 0 1 60px;
-    max-width: 60px;
+    flex: 0 0 auto;
+    width: 50px;
 }
 
 /* Adjustments for spans without a class */
 span:not([class]) {
     height: 1px;
-    display: block; /* Ensure height is applied */
+    display: block;
 }
 
 /* Responsive Design */
@@ -186,13 +205,9 @@ span:not([class]) {
     width: 100%;
 }
 
-/* Subtle background and reduced visual prominence */
+/* Cool Aesthetic Enhancements */
 body {
     background-color: #f2f2f2;
-}
-
-.MobileSubScreen {
-    background-color: #ffffff;
 }
 
 .MobileEdit,
@@ -201,7 +216,7 @@ body {
 }
 
 .MobileButton {
-    background-color: #007bff; /* Subtle blue */
+    background-color: #007bff;
 }
 
 .MobileButton:hover {
