@@ -470,8 +470,7 @@ img, video {
   width: 100%;
   max-width: 500px; /* Increased max width */
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   align-items: center;
 }
 
