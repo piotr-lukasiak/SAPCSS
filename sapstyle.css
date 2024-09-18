@@ -516,7 +516,7 @@ img, video {
 
 /* --- STANDARD CELL ----------------*/
 .MobileLoginStdCell {
-  width: 100%;
+  width: 50%;
   margin-bottom: var(--base-margin);
   box-sizing: border-box;
 }
