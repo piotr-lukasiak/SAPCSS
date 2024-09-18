@@ -450,6 +450,17 @@ img, video {
 /*----------------------------------*/
 
 /* --- LOGIN BODY -------------------*/
+.MobileLoginScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: var(--base-padding);
+  box-sizing: border-box;
+}
+
 .MobileLoginBody {
   display: flex;
   flex-direction: column;
